@@ -1,12 +1,12 @@
 module.exports = {
-  name: 'vant',
+  name: 'bvant',
   build: {
     skipInstall: ['lazyload'],
     site: {
       publicPath: 'https://b.yzcdn.cn/vant/',
     },
     vetur: {
-      tagPrefix: 'van-',
+      tagPrefix: 'bvan-',
     },
   },
   site: {

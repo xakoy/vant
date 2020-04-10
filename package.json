@@ -84,7 +84,10 @@
     "root": true,
     "extends": [
       "@vant"
-    ]
+    ],
+    "rules": {
+      "linebreak-style": ["off", "windows"]
+    }
   },
   "stylelint": {
     "extends": [
