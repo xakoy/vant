@@ -2,44 +2,44 @@
   <demo-section>
     <demo-block :title="t('type')">
       <div class="demo-button-row">
-        <van-button type="default">{{ t('default') }}</van-button>
-        <van-button type="primary">{{ t('primary') }}</van-button>
-        <van-button type="info">{{ t('info') }}</van-button>
+        <bvan-button type="default">{{ t('default') }}</bvan-button>
+        <bvan-button type="primary">{{ t('primary') }}</bvan-button>
+        <bvan-button type="info">{{ t('info') }}</bvan-button>
       </div>
-      <van-button type="danger">{{ t('danger') }}</van-button>
-      <van-button type="warning">{{ t('warning') }}</van-button>
+      <bvan-button type="danger">{{ t('danger') }}</bvan-button>
+      <bvan-button type="warning">{{ t('warning') }}</bvan-button>
     </demo-block>
 
     <demo-block :title="t('plain')">
-      <van-button plain type="primary" :text="t('plain')" />
-      <van-button plain type="info" :text="t('plain')" />
+      <bvan-button plain type="primary" :text="t('plain')" />
+      <bvan-button plain type="info" :text="t('plain')" />
     </demo-block>
 
     <demo-block :title="t('hairline')">
-      <van-button plain hairline type="primary" :text="t('hairlineButton')" />
-      <van-button plain hairline type="info" :text="t('hairlineButton')" />
+      <bvan-button plain hairline type="primary" :text="t('hairlineButton')" />
+      <bvan-button plain hairline type="info" :text="t('hairlineButton')" />
     </demo-block>
 
     <demo-block :title="t('disabled')">
-      <van-button disabled type="primary" :text="t('disabled')" />
-      <van-button disabled type="info" :text="t('disabled')" />
+      <bvan-button disabled type="primary" :text="t('disabled')" />
+      <bvan-button disabled type="info" :text="t('disabled')" />
     </demo-block>
 
     <demo-block :title="t('loadingStatus')">
-      <van-button loading type="primary" />
-      <van-button loading type="primary" loading-type="spinner" />
-      <van-button loading :loading-text="t('loadingText')" type="info" />
+      <bvan-button loading type="primary" />
+      <bvan-button loading type="primary" loading-type="spinner" />
+      <bvan-button loading :loading-text="t('loadingText')" type="info" />
     </demo-block>
 
     <demo-block :title="t('shape')">
-      <van-button type="primary" square :text="t('square')" />
-      <van-button type="info" round :text="t('round')" />
+      <bvan-button type="primary" square :text="t('square')" />
+      <bvan-button type="info" round :text="t('round')" />
     </demo-block>
 
     <demo-block :title="t('icon')">
-      <van-button type="primary" icon="star-o" />
-      <van-button type="primary" icon="star-o" :text="t('button')" />
-      <van-button
+      <bvan-button type="primary" icon="star-o" />
+      <bvan-button type="primary" icon="star-o" :text="t('button')" />
+      <bvan-button
         plain
         type="primary"
         icon="https://img.yzcdn.cn/vant/logo.png"
@@ -48,29 +48,29 @@
     </demo-block>
 
     <demo-block :title="t('size')">
-      <van-button type="primary" size="large">{{ t('large') }}</van-button>
-      <van-button type="primary" size="normal">{{ t('normal') }}</van-button>
-      <van-button type="primary" size="small">{{ t('small') }}</van-button>
-      <van-button type="primary" size="mini">{{ t('mini') }}</van-button>
+      <bvan-button type="primary" size="large">{{ t('large') }}</bvan-button>
+      <bvan-button type="primary" size="normal">{{ t('normal') }}</bvan-button>
+      <bvan-button type="primary" size="small">{{ t('small') }}</bvan-button>
+      <bvan-button type="primary" size="mini">{{ t('mini') }}</bvan-button>
     </demo-block>
 
     <demo-block :title="t('blockElement')">
-      <van-button type="primary" block>{{ t('blockElement') }}</van-button>
+      <bvan-button type="primary" block>{{ t('blockElement') }}</bvan-button>
     </demo-block>
 
     <demo-block v-if="!isWeapp" :title="t('router')">
-      <van-button
+      <bvan-button
         :text="t('urlRoute')"
         type="primary"
         url="/vant/mobile.html"
       />
-      <van-button :text="t('vueRoute')" type="primary" to="index" />
+      <bvan-button :text="t('vueRoute')" type="primary" to="index" />
     </demo-block>
 
     <demo-block :title="t('customColor')">
-      <van-button color="#7232dd" :text="t('pure')" />
-      <van-button plain color="#7232dd" :text="t('pure')" />
-      <van-button
+      <bvan-button color="#7232dd" :text="t('pure')" />
+      <bvan-button plain color="#7232dd" :text="t('pure')" />
+      <bvan-button
         color="linear-gradient(to right, #4bb0ff, #6149f6)"
         :text="t('gradient')"
       />
@@ -149,7 +149,7 @@ export default {
 .demo-button {
   background: @white;
 
-  .van-button {
+  .bvan-button {
     &--large {
       margin-bottom: @padding-md;
     }
