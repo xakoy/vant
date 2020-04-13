@@ -23,12 +23,6 @@
     "release:site": "sh docs/site/release.sh",
     "test:coverage": "open test/coverage/index.html"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && ls-lint",
-      "commit-msg": "vant-cli commit-lint"
-    }
-  },
   "lint-staged": {
     "*.{ts,tsx,js,vue,less}": [
       "prettier --write",
