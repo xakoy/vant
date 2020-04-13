@@ -1,29 +1,29 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-button
+      <bvan-button
         type="primary"
         :text="t('showOverlay')"
         style="margin-left: 16px;"
         @click="show = true"
       />
 
-      <van-overlay :show="show" @click="show = false" />
+      <bvan-overlay :show="show" @click="show = false" />
     </demo-block>
 
     <demo-block :title="t('embeddedContent')">
-      <van-button
+      <bvan-button
         type="primary"
         :text="t('embeddedContent')"
         style="margin-left: 16px;"
         @click="showEmbedded = true"
       />
 
-      <van-overlay :show="showEmbedded" @click="showEmbedded = false">
+      <bvan-overlay :show="showEmbedded" @click="showEmbedded = false">
         <div class="wrapper">
           <div class="block" />
         </div>
-      </van-overlay>
+      </bvan-overlay>
     </demo-block>
   </demo-section>
 </template>

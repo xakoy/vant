@@ -1,30 +1,30 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-cell :title="t('buttonBasic')" is-link @click="showBasic = true" />
-      <van-popup v-model="showBasic" :style="{ padding: '30px 50px' }">
+      <bvan-cell :title="t('buttonBasic')" is-link @click="showBasic = true" />
+      <bvan-popup v-model="showBasic" :style="{ padding: '30px 50px' }">
         {{ t('content') }}
-      </van-popup>
+      </bvan-popup>
     </demo-block>
 
     <demo-block :title="t('position')">
-      <van-cell :title="t('buttonTop')" is-link @click="showTop = true" />
-      <van-cell :title="t('buttonBottom')" is-link @click="showBottom = true" />
-      <van-cell :title="t('buttonLeft')" is-link @click="showLeft = true" />
-      <van-cell :title="t('buttonRight')" is-link @click="showRight = true" />
+      <bvan-cell :title="t('buttonTop')" is-link @click="showTop = true" />
+      <bvan-cell :title="t('buttonBottom')" is-link @click="showBottom = true" />
+      <bvan-cell :title="t('buttonLeft')" is-link @click="showLeft = true" />
+      <bvan-cell :title="t('buttonRight')" is-link @click="showRight = true" />
 
-      <van-popup v-model="showTop" position="top" :style="{ height: '30%' }" />
-      <van-popup
+      <bvan-popup v-model="showTop" position="top" :style="{ height: '30%' }" />
+      <bvan-popup
         v-model="showBottom"
         position="bottom"
         :style="{ height: '30%' }"
       />
-      <van-popup
+      <bvan-popup
         v-model="showLeft"
         position="left"
         :style="{ width: '30%', height: '100%' }"
       />
-      <van-popup
+      <bvan-popup
         v-model="showRight"
         position="right"
         :style="{ width: '30%', height: '100%' }"
@@ -32,32 +32,32 @@
     </demo-block>
 
     <demo-block :title="t('closeIcon')">
-      <van-cell :title="t('closeIcon')" is-link @click="showCloseIcon = true" />
-      <van-cell
+      <bvan-cell :title="t('closeIcon')" is-link @click="showCloseIcon = true" />
+      <bvan-cell
         :title="t('customCloseIcon')"
         is-link
         @click="showCustomCloseIcon = true"
       />
-      <van-cell
+      <bvan-cell
         :title="t('customIconPosition')"
         is-link
         @click="showCustomIconPosition = true"
       />
 
-      <van-popup
+      <bvan-popup
         v-model="showCloseIcon"
         closeable
         position="bottom"
         :style="{ height: '30%' }"
       />
-      <van-popup
+      <bvan-popup
         v-model="showCustomCloseIcon"
         closeable
         close-icon="close"
         position="bottom"
         :style="{ height: '30%' }"
       />
-      <van-popup
+      <bvan-popup
         v-model="showCustomIconPosition"
         closeable
         close-icon-position="top-left"
@@ -67,12 +67,12 @@
     </demo-block>
 
     <demo-block :title="t('roundCorner')">
-      <van-cell
+      <bvan-cell
         :title="t('roundCorner')"
         is-link
         @click="showRoundCorner = true"
       />
-      <van-popup
+      <bvan-popup
         v-model="showRoundCorner"
         round
         position="bottom"
@@ -81,12 +81,12 @@
     </demo-block>
 
     <demo-block v-if="!isWeapp" :title="t('getContainer')">
-      <van-cell
+      <bvan-cell
         :title="t('getContainer')"
         is-link
         @click="showGetContainer = true"
       />
-      <van-popup
+      <bvan-popup
         v-model="showGetContainer"
         get-container="body"
         :style="{ padding: '30px 50px' }"
@@ -147,11 +147,11 @@ export default {
 @import '../../style/var';
 
 .demo-popup {
-  .van-row {
+  .bvan-row {
     margin-bottom: @padding-md;
   }
 
-  .van-button {
+  .bvan-button {
     margin-left: @padding-md;
   }
 }
