@@ -1,64 +1,64 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-row>
-        <van-col span="8">span: 8</van-col>
-        <van-col span="8">span: 8</van-col>
-        <van-col span="8">span: 8</van-col>
-      </van-row>
+      <bvan-row>
+        <bvan-col span="8">span: 8</bvan-col>
+        <bvan-col span="8">span: 8</bvan-col>
+        <bvan-col span="8">span: 8</bvan-col>
+      </bvan-row>
 
-      <van-row>
-        <van-col span="4">span: 4</van-col>
-        <van-col span="10" offset="4">
+      <bvan-row>
+        <bvan-col span="4">span: 4</bvan-col>
+        <bvan-col span="10" offset="4">
           offset: 4, span: 10
-        </van-col>
-      </van-row>
+        </bvan-col>
+      </bvan-row>
 
-      <van-row>
-        <van-col offset="12" span="12">
+      <bvan-row>
+        <bvan-col offset="12" span="12">
           offset: 12, span: 12
-        </van-col>
-      </van-row>
+        </bvan-col>
+      </bvan-row>
     </demo-block>
 
     <demo-block :title="t('title2')">
-      <van-row gutter="20">
-        <van-col span="8">span: 8</van-col>
-        <van-col span="8">span: 8</van-col>
-        <van-col span="8">span: 8</van-col>
-      </van-row>
+      <bvan-row gutter="20">
+        <bvan-col span="8">span: 8</bvan-col>
+        <bvan-col span="8">span: 8</bvan-col>
+        <bvan-col span="8">span: 8</bvan-col>
+      </bvan-row>
     </demo-block>
 
     <demo-block v-if="!isWeapp" :title="t('title3')">
-      <van-row type="flex">
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-      </van-row>
+      <bvan-row type="flex">
+        <bvan-col span="6">span: 6</bvan-col>
+        <bvan-col span="6">span: 6</bvan-col>
+        <bvan-col span="6">span: 6</bvan-col>
+      </bvan-row>
 
-      <van-row type="flex" justify="center">
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-      </van-row>
+      <bvan-row type="flex" justify="center">
+        <bvan-col span="6">span: 6</bvan-col>
+        <bvan-col span="6">span: 6</bvan-col>
+        <bvan-col span="6">span: 6</bvan-col>
+      </bvan-row>
 
-      <van-row type="flex" justify="end">
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-      </van-row>
+      <bvan-row type="flex" justify="end">
+        <bvan-col span="6">span: 6</bvan-col>
+        <bvan-col span="6">span: 6</bvan-col>
+        <bvan-col span="6">span: 6</bvan-col>
+      </bvan-row>
 
-      <van-row type="flex" justify="space-between">
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-      </van-row>
+      <bvan-row type="flex" justify="space-between">
+        <bvan-col span="6">span: 6</bvan-col>
+        <bvan-col span="6">span: 6</bvan-col>
+        <bvan-col span="6">span: 6</bvan-col>
+      </bvan-row>
 
-      <van-row type="flex" justify="space-around">
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-        <van-col span="6">span: 6</van-col>
-      </van-row>
+      <bvan-row type="flex" justify="space-around">
+        <bvan-col span="6">span: 6</bvan-col>
+        <bvan-col span="6">span: 6</bvan-col>
+        <bvan-col span="6">span: 6</bvan-col>
+      </bvan-row>
     </demo-block>
   </demo-section>
 </template>
@@ -84,15 +84,15 @@ export default {
 .demo-col {
   background: @white;
 
-  .van-doc-demo-block {
+  .bvan-doc-demo-block {
     padding: 0 @padding-md;
   }
 
-  .van-doc-demo-block__title {
+  .bvan-doc-demo-block__title {
     padding-left: 0;
   }
 
-  .van-col {
+  .bvan-col {
     margin-bottom: 10px;
     color: @white;
     font-size: 13px;

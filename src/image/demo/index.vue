@@ -1,61 +1,61 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-row>
-        <van-image width="100" height="100" :src="image" />
-      </van-row>
+      <bvan-row>
+        <bvan-image width="100" height="100" :src="image" />
+      </bvan-row>
     </demo-block>
 
     <demo-block :title="t('fitMode')">
-      <van-row gutter="20">
-        <van-col v-for="fit in fits" span="8" :key="fit">
-          <van-image :fit="fit" width="100%" height="27vw" :src="image" />
+      <bvan-row gutter="20">
+        <bvan-col v-for="fit in fits" span="8" :key="fit">
+          <bvan-image :fit="fit" width="100%" height="27vw" :src="image" />
           <div class="text">{{ fit }}</div>
-        </van-col>
-      </van-row>
+        </bvan-col>
+      </bvan-row>
     </demo-block>
 
     <demo-block :title="t('round')">
-      <van-row gutter="20">
-        <van-col v-for="fit in fits" span="8" :key="fit">
-          <van-image round :fit="fit" width="100%" height="27vw" :src="image" />
+      <bvan-row gutter="20">
+        <bvan-col v-for="fit in fits" span="8" :key="fit">
+          <bvan-image round :fit="fit" width="100%" height="27vw" :src="image" />
           <div class="text">{{ fit }}</div>
-        </van-col>
-      </van-row>
+        </bvan-col>
+      </bvan-row>
     </demo-block>
 
     <demo-block :title="t('loading')">
-      <van-row gutter="20">
-        <van-col span="8">
-          <van-image width="100%" height="27vw" />
+      <bvan-row gutter="20">
+        <bvan-col span="8">
+          <bvan-image width="100%" height="27vw" />
           <div class="text">{{ t('defaultTip') }}</div>
-        </van-col>
+        </bvan-col>
 
-        <van-col span="8">
-          <van-image width="100%" height="27vw">
+        <bvan-col span="8">
+          <bvan-image width="100%" height="27vw">
             <template #loading>
-              <van-loading type="spinner" size="20" />
+              <bvan-loading type="spinner" size="20" />
             </template>
-          </van-image>
+          </bvan-image>
           <div class="text">{{ t('customTip') }}</div>
-        </van-col>
-      </van-row>
+        </bvan-col>
+      </bvan-row>
     </demo-block>
 
     <demo-block :title="t('error')">
-      <van-row gutter="20">
-        <van-col span="8">
-          <van-image width="100%" height="27vw" src="x" />
+      <bvan-row gutter="20">
+        <bvan-col span="8">
+          <bvan-image width="100%" height="27vw" src="x" />
           <div class="text">{{ t('defaultTip') }}</div>
-        </van-col>
+        </bvan-col>
 
-        <van-col span="8">
-          <van-image width="100%" height="27vw" src="x">
+        <bvan-col span="8">
+          <bvan-image width="100%" height="27vw" src="x">
             <template #error>{{ t('loadFail') }}</template>
-          </van-image>
+          </bvan-image>
           <div class="text">{{ t('customTip') }}</div>
-        </van-col>
-      </van-row>
+        </bvan-col>
+      </bvan-row>
     </demo-block>
   </demo-section>
 </template>
@@ -99,11 +99,11 @@ export default {
   overflow-x: hidden;
   background-color: @white;
 
-  .van-row {
+  .bvan-row {
     padding: 0 @padding-md;
   }
 
-  .van-col {
+  .bvan-col {
     margin-bottom: 20px;
   }
 
