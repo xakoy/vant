@@ -1,38 +1,38 @@
 <template>
   <demo-section>
     <demo-block :title="t('alert1')">
-      <van-button type="primary" @click="onClickAlert">
+      <bvan-button type="primary" @click="onClickAlert">
         {{ t('alert1') }}
-      </van-button>
-      <van-button type="primary" @click="onClickAlert2">
+      </bvan-button>
+      <bvan-button type="primary" @click="onClickAlert2">
         {{ t('alert2') }}
-      </van-button>
+      </bvan-button>
     </demo-block>
 
     <demo-block :title="t('confirm')">
-      <van-button type="primary" @click="onClickConfirm">
+      <bvan-button type="primary" @click="onClickConfirm">
         {{ t('confirm') }}
-      </van-button>
+      </bvan-button>
     </demo-block>
 
     <demo-block :title="t('asyncClose')">
-      <van-button type="primary" @click="onClickAsyncClose">
+      <bvan-button type="primary" @click="onClickAsyncClose">
         {{ t('asyncClose') }}
-      </van-button>
+      </bvan-button>
     </demo-block>
 
     <demo-block :title="t('componentCall')">
-      <van-button type="primary" @click="show = true">
+      <bvan-button type="primary" @click="show = true">
         {{ t('componentCall') }}
-      </van-button>
-      <van-dialog
+      </bvan-button>
+      <bvan-dialog
         v-model="show"
         :title="t('title')"
         show-cancel-button
         :lazy-render="false"
       >
         <img :src="image" />
-      </van-dialog>
+      </bvan-dialog>
     </demo-block>
   </demo-section>
 </template>
@@ -111,7 +111,7 @@ export default {
 .demo-dialog {
   background-color: @white;
 
-  .van-doc-demo-block > .van-button {
+  .van-doc-demo-block > .@{module}-button {
     margin-left: @padding-md;
   }
 
