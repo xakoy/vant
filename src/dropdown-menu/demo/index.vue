@@ -1,44 +1,44 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-dropdown-menu>
-        <van-dropdown-item v-model="value1" :options="option1" />
-        <van-dropdown-item v-model="value2" :options="option2" />
-      </van-dropdown-menu>
+      <bvan-dropdown-menu>
+        <bvan-dropdown-item v-model="value1" :options="option1" />
+        <bvan-dropdown-item v-model="value2" :options="option2" />
+      </bvan-dropdown-menu>
     </demo-block>
 
     <demo-block :title="t('customContent')">
-      <van-dropdown-menu>
-        <van-dropdown-item v-model="value1" :options="option1" />
-        <van-dropdown-item :title="t('itemTitle')" ref="item">
-          <van-switch-cell v-model="switch1" :title="t('switchTitle1')" />
-          <van-switch-cell v-model="switch2" :title="t('switchTitle2')" />
-          <van-button type="info" block @click="onConfirm">
+      <bvan-dropdown-menu>
+        <bvan-dropdown-item v-model="value1" :options="option1" />
+        <bvan-dropdown-item :title="t('itemTitle')" ref="item">
+          <bvan-switch-cell v-model="switch1" :title="t('switchTitle1')" />
+          <bvan-switch-cell v-model="switch2" :title="t('switchTitle2')" />
+          <bvan-button type="info" block @click="onConfirm">
             {{ t('confirm') }}
-          </van-button>
-        </van-dropdown-item>
-      </van-dropdown-menu>
+          </bvan-button>
+        </bvan-dropdown-item>
+      </bvan-dropdown-menu>
     </demo-block>
 
     <demo-block :title="t('customActiveColor')">
-      <van-dropdown-menu active-color="#ee0a24">
-        <van-dropdown-item v-model="value1" :options="option1" />
-        <van-dropdown-item v-model="value2" :options="option2" />
-      </van-dropdown-menu>
+      <bvan-dropdown-menu active-color="#ee0a24">
+        <bvan-dropdown-item v-model="value1" :options="option1" />
+        <bvan-dropdown-item v-model="value2" :options="option2" />
+      </bvan-dropdown-menu>
     </demo-block>
 
     <demo-block :title="t('expandDirection')">
-      <van-dropdown-menu direction="up">
-        <van-dropdown-item v-model="value1" :options="option1" />
-        <van-dropdown-item v-model="value2" :options="option2" />
-      </van-dropdown-menu>
+      <bvan-dropdown-menu direction="up">
+        <bvan-dropdown-item v-model="value1" :options="option1" />
+        <bvan-dropdown-item v-model="value2" :options="option2" />
+      </bvan-dropdown-menu>
     </demo-block>
 
     <demo-block :title="t('disableMenu')">
-      <van-dropdown-menu>
-        <van-dropdown-item v-model="value1" disabled :options="option1" />
-        <van-dropdown-item v-model="value2" disabled :options="option2" />
-      </van-dropdown-menu>
+      <bvan-dropdown-menu>
+        <bvan-dropdown-item v-model="value1" disabled :options="option1" />
+        <bvan-dropdown-item v-model="value2" disabled :options="option2" />
+      </bvan-dropdown-menu>
     </demo-block>
   </demo-section>
 </template>
