@@ -1,66 +1,66 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-swipe :autoplay="3000" indicator-color="white">
-        <van-swipe-item>1</van-swipe-item>
-        <van-swipe-item>2</van-swipe-item>
-        <van-swipe-item>3</van-swipe-item>
-        <van-swipe-item>4</van-swipe-item>
-      </van-swipe>
+      <bvan-swipe :autoplay="3000" indicator-color="white">
+        <bvan-swipe-item>1</bvan-swipe-item>
+        <bvan-swipe-item>2</bvan-swipe-item>
+        <bvan-swipe-item>3</bvan-swipe-item>
+        <bvan-swipe-item>4</bvan-swipe-item>
+      </bvan-swipe>
     </demo-block>
 
     <demo-block :title="t('title2')">
-      <van-swipe :autoplay="3000">
-        <van-swipe-item v-for="(image, index) in images" :key="index">
+      <bvan-swipe :autoplay="3000">
+        <bvan-swipe-item v-for="(image, index) in images" :key="index">
           <img v-lazy="image" />
-        </van-swipe-item>
-      </van-swipe>
+        </bvan-swipe-item>
+      </bvan-swipe>
     </demo-block>
 
     <demo-block :title="t('title3')">
-      <van-swipe indicator-color="white" @change="onChange1">
-        <van-swipe-item>1</van-swipe-item>
-        <van-swipe-item>2</van-swipe-item>
-        <van-swipe-item>3</van-swipe-item>
-        <van-swipe-item>4</van-swipe-item>
-      </van-swipe>
+      <bvan-swipe indicator-color="white" @change="onChange1">
+        <bvan-swipe-item>1</bvan-swipe-item>
+        <bvan-swipe-item>2</bvan-swipe-item>
+        <bvan-swipe-item>3</bvan-swipe-item>
+        <bvan-swipe-item>4</bvan-swipe-item>
+      </bvan-swipe>
     </demo-block>
 
     <demo-block :title="t('title4')">
-      <van-swipe
+      <bvan-swipe
         vertical
         :autoplay="3000"
         indicator-color="white"
         style="height: 200px;"
         class="demo-swipe--vertical"
       >
-        <van-swipe-item>1</van-swipe-item>
-        <van-swipe-item>2</van-swipe-item>
-        <van-swipe-item>3</van-swipe-item>
-        <van-swipe-item>4</van-swipe-item>
-      </van-swipe>
+        <bvan-swipe-item>1</bvan-swipe-item>
+        <bvan-swipe-item>2</bvan-swipe-item>
+        <bvan-swipe-item>3</bvan-swipe-item>
+        <bvan-swipe-item>4</bvan-swipe-item>
+      </bvan-swipe>
     </demo-block>
 
     <demo-block :title="t('title5')">
-      <van-swipe :width="300" :loop="false" indicator-color="white">
-        <van-swipe-item>1</van-swipe-item>
-        <van-swipe-item>2</van-swipe-item>
-        <van-swipe-item>3</van-swipe-item>
-        <van-swipe-item>4</van-swipe-item>
-      </van-swipe>
+      <bvan-swipe :width="300" :loop="false" indicator-color="white">
+        <bvan-swipe-item>1</bvan-swipe-item>
+        <bvan-swipe-item>2</bvan-swipe-item>
+        <bvan-swipe-item>3</bvan-swipe-item>
+        <bvan-swipe-item>4</bvan-swipe-item>
+      </bvan-swipe>
     </demo-block>
 
     <demo-block :title="t('title6')">
-      <van-swipe @change="onChange2">
-        <van-swipe-item>1</van-swipe-item>
-        <van-swipe-item>2</van-swipe-item>
-        <van-swipe-item>3</van-swipe-item>
-        <van-swipe-item>4</van-swipe-item>
+      <bvan-swipe @change="onChange2">
+        <bvan-swipe-item>1</bvan-swipe-item>
+        <bvan-swipe-item>2</bvan-swipe-item>
+        <bvan-swipe-item>3</bvan-swipe-item>
+        <bvan-swipe-item>4</bvan-swipe-item>
 
         <template #indicator>
           <div class="custom-indicator">{{ current + 1 }}/4</div>
         </template>
-      </van-swipe>
+      </bvan-swipe>
     </demo-block>
   </demo-section>
 </template>
@@ -116,7 +116,7 @@ export default {
 .demo-swipe {
   padding-bottom: 30px;
 
-  .van-swipe {
+  .@{module}-swipe {
     &-item {
       color: @white;
       font-size: 20px;
@@ -144,7 +144,7 @@ export default {
   }
 
   &--vertical {
-    .van-swipe-item {
+    .@{module}-swipe-item {
       line-height: 200px;
     }
   }
