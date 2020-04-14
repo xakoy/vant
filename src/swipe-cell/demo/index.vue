@@ -2,21 +2,21 @@
   <div>
     <demo-section>
       <demo-block :title="t('basicUsage')">
-        <van-swipe-cell>
+        <bvan-swipe-cell>
           <template #left>
-            <van-button square type="primary" :text="t('select')" />
+            <bvan-button square type="primary" :text="t('select')" />
           </template>
-          <van-cell :border="false" :title="t('title')" :value="t('content')" />
+          <bvan-cell :border="false" :title="t('title')" :value="t('content')" />
           <template #right>
-            <van-button square type="danger" :text="t('delete')" />
-            <van-button square type="primary" :text="t('collect')" />
+            <bvan-button square type="danger" :text="t('delete')" />
+            <bvan-button square type="primary" :text="t('collect')" />
           </template>
-        </van-swipe-cell>
+        </bvan-swipe-cell>
       </demo-block>
 
       <demo-block :title="t('customContent')">
-        <van-swipe-cell>
-          <van-card
+        <bvan-swipe-cell>
+          <bvan-card
             num="2"
             price="2.00"
             :desc="t('desc')"
@@ -24,26 +24,26 @@
             :thumb="imageURL"
           />
           <template #right>
-            <van-button
+            <bvan-button
               square
               type="danger"
               class="delete-button"
               :text="t('delete')"
             />
           </template>
-        </van-swipe-cell>
+        </bvan-swipe-cell>
       </demo-block>
 
       <demo-block :title="t('beforeClose')">
-        <van-swipe-cell :before-close="beforeClose">
+        <bvan-swipe-cell :before-close="beforeClose">
           <template #left>
-            <van-button square type="primary" :text="t('select')" />
+            <bvan-button square type="primary" :text="t('select')" />
           </template>
-          <van-cell :border="false" :title="t('title')" :value="t('content')" />
+          <bvan-cell :border="false" :title="t('title')" :value="t('content')" />
           <template #right>
-            <van-button square type="danger" :text="t('delete')" />
+            <bvan-button square type="danger" :text="t('delete')" />
           </template>
-        </van-swipe-cell>
+        </bvan-swipe-cell>
       </demo-block>
     </demo-section>
   </div>
@@ -109,7 +109,7 @@ export default {
 .demo-swipe-cell {
   user-select: none;
 
-  .van-card {
+  .@{module}-card {
     margin: 0;
     background-color: @white;
   }
