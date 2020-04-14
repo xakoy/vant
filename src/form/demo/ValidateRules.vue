@@ -1,21 +1,21 @@
 <template>
   <demo-block :title="t('title')">
-    <van-form validate-first @sumbit="onSubmit" @failed="onFailed">
-      <van-field
+    <bvan-form validate-first @sumbit="onSubmit" @failed="onFailed">
+      <bvan-field
         v-model="value1"
         name="pattern"
         :label="t('label')"
         :rules="[{ pattern, message: t('message') }]"
         :placeholder="t('pattern')"
       />
-      <van-field
+      <bvan-field
         v-model="value2"
         name="validator"
         :label="t('label')"
         :rules="[{ validator, message: t('message') }]"
         :placeholder="t('validator')"
       />
-      <van-field
+      <bvan-field
         v-model="value3"
         name="asyncValidator"
         :label="t('label')"
@@ -23,11 +23,11 @@
         :placeholder="t('asyncValidator')"
       />
       <div style="margin: 16px 16px 0;">
-        <van-button round block type="info" native-type="submit">
+        <bvan-button round block type="info" native-type="submit">
           {{ t('submit') }}
-        </van-button>
+        </bvan-button>
       </div>
-    </van-form>
+    </bvan-form>
   </demo-block>
 </template>
 

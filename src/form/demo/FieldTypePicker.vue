@@ -1,6 +1,6 @@
 <template>
   <div class="van-hairline--bottom">
-    <van-field
+    <bvan-field
       readonly
       clickable
       name="picker"
@@ -10,14 +10,14 @@
       :placeholder="t('placeholder')"
       @click="showPicker = true"
     />
-    <van-popup v-model="showPicker" position="bottom">
-      <van-picker
+    <bvan-popup v-model="showPicker" position="bottom">
+      <bvan-picker
         show-toolbar
         :columns="t('textColumns')"
         @confirm="onConfirm"
         @cancel="onCancel"
       />
-    </van-popup>
+    </bvan-popup>
   </div>
 </template>
 

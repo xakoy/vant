@@ -1,63 +1,63 @@
 <template>
   <demo-block :title="t('fieldType')">
-    <van-form @submit="onSubmit">
-      <van-field name="switch" :label="t('switch')">
+    <bvan-form @submit="onSubmit">
+      <bvan-field name="switch" :label="t('switch')">
         <template #input>
-          <van-switch v-model="switchChecked" size="20" />
+          <bvan-switch v-model="switchChecked" size="20" />
         </template>
-      </van-field>
+      </bvan-field>
 
-      <van-field name="checkbox" :label="t('checkbox')">
+      <bvan-field name="checkbox" :label="t('checkbox')">
         <template #input>
-          <van-checkbox v-model="checkbox" shape="square" />
+          <bvan-checkbox v-model="checkbox" shape="square" />
         </template>
-      </van-field>
+      </bvan-field>
 
-      <van-field name="checkboxGroup" :label="t('checkboxGroup')">
+      <bvan-field name="checkboxGroup" :label="t('checkboxGroup')">
         <template #input>
-          <van-checkbox-group v-model="checkboxGroup" direction="horizontal">
-            <van-checkbox name="1" shape="square">
+          <bvan-checkbox-group v-model="checkboxGroup" direction="horizontal">
+            <bvan-checkbox name="1" shape="square">
               {{ t('checkbox') }} 1
-            </van-checkbox>
-            <van-checkbox name="2" shape="square">
+            </bvan-checkbox>
+            <bvan-checkbox name="2" shape="square">
               {{ t('checkbox') }} 2
-            </van-checkbox>
-          </van-checkbox-group>
+            </bvan-checkbox>
+          </bvan-checkbox-group>
         </template>
-      </van-field>
+      </bvan-field>
 
-      <van-field name="radio" :label="t('radio')">
+      <bvan-field name="radio" :label="t('radio')">
         <template #input>
-          <van-radio-group v-model="radio" direction="horizontal">
-            <van-radio name="1">{{ t('radio') }} 1</van-radio>
-            <van-radio name="2">{{ t('radio') }} 2</van-radio>
-          </van-radio-group>
+          <bvan-radio-group v-model="radio" direction="horizontal">
+            <bvan-radio name="1">{{ t('radio') }} 1</bvan-radio>
+            <bvan-radio name="2">{{ t('radio') }} 2</bvan-radio>
+          </bvan-radio-group>
         </template>
-      </van-field>
+      </bvan-field>
 
-      <van-field name="stepper" :label="t('stepper')">
+      <bvan-field name="stepper" :label="t('stepper')">
         <template #input>
-          <van-stepper v-model="stepper" />
+          <bvan-stepper v-model="stepper" />
         </template>
-      </van-field>
+      </bvan-field>
 
-      <van-field name="rate" :label="t('rate')">
+      <bvan-field name="rate" :label="t('rate')">
         <template #input>
-          <van-rate v-model="rate" />
+          <bvan-rate v-model="rate" />
         </template>
-      </van-field>
+      </bvan-field>
 
-      <van-field name="slider" :label="t('slider')">
+      <bvan-field name="slider" :label="t('slider')">
         <template #input>
-          <van-slider v-model="slider" />
+          <bvan-slider v-model="slider" />
         </template>
-      </van-field>
+      </bvan-field>
 
-      <van-field name="uploader" :label="t('uploader')">
+      <bvan-field name="uploader" :label="t('uploader')">
         <template #input>
-          <van-uploader v-model="uploader" max-count="2" />
+          <bvan-uploader v-model="uploader" max-count="2" />
         </template>
-      </van-field>
+      </bvan-field>
 
       <field-type-picker />
       <field-type-datetime-picker />
@@ -65,11 +65,11 @@
       <field-type-calendar />
 
       <div style="margin: 16px 16px 0;">
-        <van-button round block type="info" native-type="submit">
+        <bvan-button round block type="info" native-type="submit">
           {{ t('submit') }}
-        </van-button>
+        </bvan-button>
       </div>
-    </van-form>
+    </bvan-form>
   </demo-block>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="van-hairline--bottom">
-    <van-field
+    <bvan-field
       readonly
       clickable
       name="datetimePicker"
@@ -10,13 +10,13 @@
       :placeholder="t('placeholder')"
       @click="showPicker = true"
     />
-    <van-popup v-model="showPicker" position="bottom">
-      <van-datetime-picker
+    <bvan-popup v-model="showPicker" position="bottom">
+      <bvan-datetime-picker
         type="time"
         @confirm="onConfirm"
         @cancel="onCancel"
       />
-    </van-popup>
+    </bvan-popup>
   </div>
 </template>
 
