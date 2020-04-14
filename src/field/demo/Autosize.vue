@@ -1,6 +1,6 @@
 <template>
   <demo-block :title="t('autosize')">
-    <van-field
+    <bvan-field
       v-model="value"
       autosize
       rows="1"

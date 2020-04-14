@@ -1,8 +1,8 @@
 <template>
   <demo-block :title="t('basicUsage')">
-    <van-cell-group>
-      <van-field v-model="value" :placeholder="t('placeholder')" />
-    </van-cell-group>
+    <bvan-cell-group>
+      <bvan-field v-model="value" :placeholder="t('placeholder')" />
+    </bvan-cell-group>
   </demo-block>
 </template>
 

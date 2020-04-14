@@ -1,6 +1,6 @@
 <template>
   <demo-block v-if="!isWeapp" :title="t('formatValue')">
-    <van-field
+    <bvan-field
       v-model="formatValue"
       :label="t('text')"
       :formatter="formatter"
