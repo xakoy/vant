@@ -1,40 +1,40 @@
 <template>
   <demo-section>
-    <van-cell center :title="t('basicUsage')">
-      <van-stepper v-model="stepper1" />
-    </van-cell>
+    <bvan-cell center :title="t('basicUsage')">
+      <bvan-stepper v-model="stepper1" />
+    </bvan-cell>
 
-    <van-cell center :title="t('step')">
-      <van-stepper v-model="stepper2" step="2" />
-    </van-cell>
+    <bvan-cell center :title="t('step')">
+      <bvan-stepper v-model="stepper2" step="2" />
+    </bvan-cell>
 
-    <van-cell center :title="t('range')">
-      <van-stepper v-model="stepper3" :min="5" :max="8" />
-    </van-cell>
+    <bvan-cell center :title="t('range')">
+      <bvan-stepper v-model="stepper3" :min="5" :max="8" />
+    </bvan-cell>
 
-    <van-cell center :title="t('integer')">
-      <van-stepper v-model="stepper4" integer />
-    </van-cell>
+    <bvan-cell center :title="t('integer')">
+      <bvan-stepper v-model="stepper4" integer />
+    </bvan-cell>
 
-    <van-cell center :title="t('disabled')">
-      <van-stepper v-model="stepper5" disabled />
-    </van-cell>
+    <bvan-cell center :title="t('disabled')">
+      <bvan-stepper v-model="stepper5" disabled />
+    </bvan-cell>
 
-    <van-cell center :title="t('disableInput')">
-      <van-stepper v-model="disabledInput" disable-input />
-    </van-cell>
+    <bvan-cell center :title="t('disableInput')">
+      <bvan-stepper v-model="disabledInput" disable-input />
+    </bvan-cell>
 
-    <van-cell center :title="t('decimalLength')">
-      <van-stepper v-model="stepper8" :decimal-length="1" step="0.2" />
-    </van-cell>
+    <bvan-cell center :title="t('decimalLength')">
+      <bvan-stepper v-model="stepper8" :decimal-length="1" step="0.2" />
+    </bvan-cell>
 
-    <van-cell center :title="t('customSize')">
-      <van-stepper v-model="stepper7" button-size="32px" input-width="40px" />
-    </van-cell>
+    <bvan-cell center :title="t('customSize')">
+      <bvan-stepper v-model="stepper7" button-size="32px" input-width="40px" />
+    </bvan-cell>
 
-    <van-cell center :title="t('asyncChange')">
-      <van-stepper :value="stepper6" async-change @change="onChange" />
-    </van-cell>
+    <bvan-cell center :title="t('asyncChange')">
+      <bvan-stepper :value="stepper6" async-change @change="onChange" />
+    </bvan-cell>
   </demo-section>
 </template>
 

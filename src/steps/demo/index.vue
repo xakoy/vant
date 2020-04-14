@@ -1,45 +1,45 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-steps :active="active">
-        <van-step>{{ t('step1') }}</van-step>
-        <van-step>{{ t('step2') }}</van-step>
-        <van-step>{{ t('step3') }}</van-step>
-        <van-step>{{ t('step4') }}</van-step>
-      </van-steps>
+      <bvan-steps :active="active">
+        <bvan-step>{{ t('step1') }}</bvan-step>
+        <bvan-step>{{ t('step2') }}</bvan-step>
+        <bvan-step>{{ t('step3') }}</bvan-step>
+        <bvan-step>{{ t('step4') }}</bvan-step>
+      </bvan-steps>
 
-      <van-button @click="nextStep">{{ t('nextStep') }}</van-button>
+      <bvan-button @click="nextStep">{{ t('nextStep') }}</bvan-button>
     </demo-block>
 
     <demo-block :title="t('customStyle')">
-      <van-steps
+      <bvan-steps
         :active="active"
         active-icon="success"
         inactive-icon="arrow"
         active-color="#38f"
       >
-        <van-step>{{ t('step1') }}</van-step>
-        <van-step>{{ t('step2') }}</van-step>
-        <van-step>{{ t('step3') }}</van-step>
-        <van-step>{{ t('step4') }}</van-step>
-      </van-steps>
+        <bvan-step>{{ t('step1') }}</bvan-step>
+        <bvan-step>{{ t('step2') }}</bvan-step>
+        <bvan-step>{{ t('step3') }}</bvan-step>
+        <bvan-step>{{ t('step4') }}</bvan-step>
+      </bvan-steps>
     </demo-block>
 
     <demo-block :title="t('title3')">
-      <van-steps :active="0" direction="vertical">
-        <van-step>
+      <bvan-steps :active="0" direction="vertical">
+        <bvan-step>
           <h3>{{ t('status1') }}</h3>
           <p>2016-07-12 12:40</p>
-        </van-step>
-        <van-step>
+        </bvan-step>
+        <bvan-step>
           <h3>{{ t('status2') }}</h3>
           <p>2016-07-11 10:00</p>
-        </van-step>
-        <van-step>
+        </bvan-step>
+        <bvan-step>
           <h3>{{ t('status3') }}</h3>
           <p>2016-07-10 09:30</p>
-        </van-step>
-      </van-steps>
+        </bvan-step>
+      </bvan-steps>
     </demo-block>
   </demo-section>
 </template>
@@ -94,11 +94,11 @@ export default {
 
 .demo-steps {
   .steps-success,
-  .van-icon-location {
+  .@{module}-icon-location {
     color: @green;
   }
 
-  .van-button {
+  .@{module}-button {
     margin: @padding-md 0 0 @padding-md;
   }
 
@@ -109,7 +109,7 @@ export default {
     font-size: inherit;
   }
 
-  .van-steps__message + p {
+  .@{module}-steps__message + p {
     margin-bottom: 10px;
   }
 }
