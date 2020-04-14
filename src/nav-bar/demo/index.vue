@@ -1,7 +1,7 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-nav-bar
+      <bvan-nav-bar
         :title="t('title')"
         :left-text="t('back')"
         :right-text="t('button')"
@@ -12,11 +12,11 @@
     </demo-block>
 
     <demo-block :title="t('useSlot')">
-      <van-nav-bar :title="t('title')" :left-text="t('back')" left-arrow>
+      <bvan-nav-bar :title="t('title')" :left-text="t('back')" left-arrow>
         <template #right>
-          <van-icon name="search" size="18" />
+          <bvan-icon name="search" size="18" />
         </template>
-      </van-nav-bar>
+      </bvan-nav-bar>
     </demo-block>
   </demo-section>
 </template>
