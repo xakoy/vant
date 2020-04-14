@@ -1,29 +1,29 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-button type="danger" :text="t('basicUsage')" @click="showNotify" />
+      <bvan-button type="danger" :text="t('basicUsage')" @click="showNotify" />
     </demo-block>
 
     <demo-block :title="t('notifyType')">
       <div style="margin-bottom: 15px;">
-        <van-button
+        <bvan-button
           type="info"
           :text="t('primary')"
           @click="showType('primary')"
         />
-        <van-button
+        <bvan-button
           type="primary"
           :text="t('success')"
           @click="showType('success')"
         />
       </div>
 
-      <van-button
+      <bvan-button
         type="danger"
         :text="t('danger')"
         @click="showType('danger')"
       />
-      <van-button
+      <bvan-button
         type="warning"
         :text="t('warning')"
         @click="showType('warning')"
@@ -31,12 +31,12 @@
     </demo-block>
 
     <demo-block :title="t('customNotify')">
-      <van-button
+      <bvan-button
         type="primary"
         :text="t('customColor')"
         @click="showCustomColor"
       />
-      <van-button
+      <bvan-button
         type="primary"
         :text="t('customDuration')"
         @click="showCustomDuration"
@@ -108,7 +108,7 @@ export default {
 .demo-notify {
   background-color: @white;
 
-  .van-button {
+  .@{module}-button {
     margin-left: @padding-md;
   }
 }
