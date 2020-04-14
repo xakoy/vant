@@ -1,23 +1,23 @@
 @import '../style/var';
 
-.van-calendar {
+.@{module}-calendar {
   display: flex;
   flex-direction: column;
   height: 100%;
   background-color: @calendar-background-color;
 
   &__popup {
-    &.van-popup--top,
-    &.van-popup--bottom {
+    &.@{module}-popup--top,
+    &.@{module}-popup--bottom {
       height: @calendar-popup-height;
     }
 
-    &.van-popup--left,
-    &.van-popup--right {
+    &.@{module}-popup--left,
+    &.@{module}-popup--right {
       height: 100%;
     }
 
-    .van-popup__close-icon {
+    .@{module}-popup__close-icon {
       top: 11px;
     }
   }
