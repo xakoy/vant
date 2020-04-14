@@ -1,53 +1,53 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-tag>{{ t('tag') }}</van-tag>
-      <van-tag type="primary">{{ t('tag') }}</van-tag>
-      <van-tag type="success">{{ t('tag') }}</van-tag>
-      <van-tag type="danger">{{ t('tag') }}</van-tag>
-      <van-tag type="warning">{{ t('tag') }}</van-tag>
+      <bvan-tag>{{ t('tag') }}</bvan-tag>
+      <bvan-tag type="primary">{{ t('tag') }}</bvan-tag>
+      <bvan-tag type="success">{{ t('tag') }}</bvan-tag>
+      <bvan-tag type="danger">{{ t('tag') }}</bvan-tag>
+      <bvan-tag type="warning">{{ t('tag') }}</bvan-tag>
     </demo-block>
 
     <demo-block :title="t('round')">
-      <van-tag round>{{ t('tag') }}</van-tag>
-      <van-tag round type="primary">{{ t('tag') }}</van-tag>
-      <van-tag round type="success">{{ t('tag') }}</van-tag>
-      <van-tag round type="danger">{{ t('tag') }}</van-tag>
-      <van-tag round type="warning">{{ t('tag') }}</van-tag>
+      <bvan-tag round>{{ t('tag') }}</bvan-tag>
+      <bvan-tag round type="primary">{{ t('tag') }}</bvan-tag>
+      <bvan-tag round type="success">{{ t('tag') }}</bvan-tag>
+      <bvan-tag round type="danger">{{ t('tag') }}</bvan-tag>
+      <bvan-tag round type="warning">{{ t('tag') }}</bvan-tag>
     </demo-block>
 
     <demo-block :title="t('mark')">
-      <van-tag mark>{{ t('tag') }}</van-tag>
-      <van-tag mark type="primary">{{ t('tag') }}</van-tag>
-      <van-tag mark type="success">{{ t('tag') }}</van-tag>
-      <van-tag mark type="danger">{{ t('tag') }}</van-tag>
-      <van-tag mark type="warning">{{ t('tag') }}</van-tag>
+      <bvan-tag mark>{{ t('tag') }}</bvan-tag>
+      <bvan-tag mark type="primary">{{ t('tag') }}</bvan-tag>
+      <bvan-tag mark type="success">{{ t('tag') }}</bvan-tag>
+      <bvan-tag mark type="danger">{{ t('tag') }}</bvan-tag>
+      <bvan-tag mark type="warning">{{ t('tag') }}</bvan-tag>
     </demo-block>
 
     <demo-block :title="t('plain')">
-      <van-tag plain>{{ t('tag') }}</van-tag>
-      <van-tag plain type="primary">{{ t('tag') }}</van-tag>
-      <van-tag plain type="success">{{ t('tag') }}</van-tag>
-      <van-tag plain type="danger">{{ t('tag') }}</van-tag>
-      <van-tag plain type="warning">{{ t('tag') }}</van-tag>
+      <bvan-tag plain>{{ t('tag') }}</bvan-tag>
+      <bvan-tag plain type="primary">{{ t('tag') }}</bvan-tag>
+      <bvan-tag plain type="success">{{ t('tag') }}</bvan-tag>
+      <bvan-tag plain type="danger">{{ t('tag') }}</bvan-tag>
+      <bvan-tag plain type="warning">{{ t('tag') }}</bvan-tag>
     </demo-block>
 
     <demo-block :title="t('customColor')">
-      <van-tag color="#f2826a">{{ t('tag') }}</van-tag>
-      <van-tag color="#f2826a" plain>{{ t('tag') }}</van-tag>
-      <van-tag color="#7232dd">{{ t('tag') }}</van-tag>
-      <van-tag color="#7232dd" plain>{{ t('tag') }}</van-tag>
-      <van-tag color="#ffe1e1" text-color="#ad0000">{{ t('tag') }}</van-tag>
+      <bvan-tag color="#f2826a">{{ t('tag') }}</bvan-tag>
+      <bvan-tag color="#f2826a" plain>{{ t('tag') }}</bvan-tag>
+      <bvan-tag color="#7232dd">{{ t('tag') }}</bvan-tag>
+      <bvan-tag color="#7232dd" plain>{{ t('tag') }}</bvan-tag>
+      <bvan-tag color="#ffe1e1" text-color="#ad0000">{{ t('tag') }}</bvan-tag>
     </demo-block>
 
     <demo-block :title="t('customSize')">
-      <van-tag type="success">{{ t('tag') }}</van-tag>
-      <van-tag type="success" size="medium">{{ t('tag') }}</van-tag>
-      <van-tag type="success" size="large">{{ t('tag') }}</van-tag>
+      <bvan-tag type="success">{{ t('tag') }}</bvan-tag>
+      <bvan-tag type="success" size="medium">{{ t('tag') }}</bvan-tag>
+      <bvan-tag type="success" size="large">{{ t('tag') }}</bvan-tag>
     </demo-block>
 
     <demo-block :title="t('closeable')">
-      <van-tag
+      <bvan-tag
         v-if="show.primary"
         size="medium"
         closeable
@@ -55,8 +55,8 @@
         @close="close('primary')"
       >
         {{ t('tag') }}
-      </van-tag>
-      <van-tag
+      </bvan-tag>
+      <bvan-tag
         v-if="show.success"
         size="medium"
         closeable
@@ -64,7 +64,7 @@
         @close="close('success')"
       >
         {{ t('tag') }}
-      </van-tag>
+      </bvan-tag>
     </demo-block>
   </demo-section>
 </template>
@@ -113,13 +113,13 @@ export default {
 .demo-tag {
   background-color: @white;
 
-  .van-tag {
+  .@{module}-tag {
     &:first-of-type {
       margin-left: @padding-md;
     }
   }
 
-  .van-tag + .van-tag {
+  .@{module}-tag + .@{module}-tag {
     margin-left: @padding-xs;
   }
 }
