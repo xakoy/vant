@@ -1,35 +1,35 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-uploader :after-read="afterRead" />
+      <bvan-uploader :after-read="afterRead" />
     </demo-block>
 
     <demo-block :title="t('preview')">
-      <van-uploader v-model="fileList" multiple accept="*" />
+      <bvan-uploader v-model="fileList" multiple accept="*" />
     </demo-block>
 
     <demo-block :title="t('disabled')">
-      <van-uploader :after-read="afterRead" disabled />
+      <bvan-uploader :after-read="afterRead" disabled />
     </demo-block>
 
     <demo-block v-if="!isWeapp" :title="t('status')">
-      <van-uploader v-model="statusFileList" :after-read="afterReadFailed" />
+      <bvan-uploader v-model="statusFileList" :after-read="afterReadFailed" />
     </demo-block>
 
     <demo-block :title="t('maxCount')">
-      <van-uploader v-model="fileList2" multiple :max-count="2" />
+      <bvan-uploader v-model="fileList2" multiple :max-count="2" />
     </demo-block>
 
     <demo-block :title="t('uploadStyle')">
-      <van-uploader>
-        <van-button type="primary" icon="photo">
-          {{ this.t('upload') }}
-        </van-button>
-      </van-uploader>
+      <bvan-uploader>
+        <bvan-button type="primary" icon="photo">
+          {{ t('upload') }}
+        </bvan-button>
+      </bvan-uploader>
     </demo-block>
 
     <demo-block :title="t('beforeRead')">
-      <van-uploader v-model="fileList3" :before-read="beforeRead" />
+      <bvan-uploader v-model="fileList3" :before-read="beforeRead" />
     </demo-block>
   </demo-section>
 </template>
@@ -123,7 +123,7 @@ export default {
 .demo-uploader {
   background-color: @white;
 
-  .van-uploader {
+  .@{module}-uploader {
     margin-left: @padding-md;
   }
 }
