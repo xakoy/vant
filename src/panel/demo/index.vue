@@ -1,21 +1,21 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-panel :title="t('title')" :desc="t('desc')" :status="t('status')">
+      <bvan-panel :title="t('title')" :desc="t('desc')" :status="t('status')">
         <div>{{ t('content') }}</div>
-      </van-panel>
+      </bvan-panel>
     </demo-block>
 
     <demo-block :title="t('advancedUsage')">
-      <van-panel :title="t('title')" :desc="t('desc')" :status="t('status')">
+      <bvan-panel :title="t('title')" :desc="t('desc')" :status="t('status')">
         <div>{{ t('content') }}</div>
         <template #footer>
-          <van-button size="small">{{ t('button') }}</van-button>
-          <van-button size="small" type="danger">
+          <bvan-button size="small">{{ t('button') }}</bvan-button>
+          <bvan-button size="small" type="danger">
             {{ t('button') }}
-          </van-button>
+          </bvan-button>
         </template>
-      </van-panel>
+      </bvan-panel>
     </demo-block>
   </demo-section>
 </template>
@@ -25,16 +25,18 @@ export default {};
 </script>
 
 <style lang="less">
+@import '../../style/var';
+
 .demo-panel {
-  .van-panel__footer {
+  .@{module}-panel__footer {
     text-align: right;
 
-    .van-button {
+    .@{module}-button {
       margin-left: 5px;
     }
   }
 
-  .van-panel__content {
+  .@{module}-panel__content {
     padding: 20px;
   }
 }
