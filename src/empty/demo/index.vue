@@ -1,25 +1,25 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-empty :description="t('description')" />
+      <bvan-empty :description="t('description')" />
     </demo-block>
 
     <demo-block :title="t('imageType')">
-      <van-tabs v-model="active">
-        <van-tab name="error" :title="t('error')">
-          <van-empty image="error" :description="t('description')" />
-        </van-tab>
-        <van-tab name="network" :title="t('network')">
-          <van-empty image="network" :description="t('description')" />
-        </van-tab>
-        <van-tab name="search" :title="t('search')">
-          <van-empty image="search" :description="t('description')" />
-        </van-tab>
-      </van-tabs>
+      <bvan-tabs v-model="active">
+        <bvan-tab name="error" :title="t('error')">
+          <bvan-empty image="error" :description="t('description')" />
+        </bvan-tab>
+        <bvan-tab name="network" :title="t('network')">
+          <bvan-empty image="network" :description="t('description')" />
+        </bvan-tab>
+        <bvan-tab name="search" :title="t('search')">
+          <bvan-empty image="search" :description="t('description')" />
+        </bvan-tab>
+      </bvan-tabs>
     </demo-block>
 
     <demo-block :title="t('customImage')">
-      <van-empty
+      <bvan-empty
         class="custom-image"
         image="https://img.yzcdn.cn/vant/custom-empty-image.png"
         :description="t('description')"
@@ -27,11 +27,11 @@
     </demo-block>
 
     <demo-block :title="t('bottomContent')">
-      <van-empty :description="t('description')">
-        <van-button round type="danger" class="bottom-button">
+      <bvan-empty :description="t('description')">
+        <bvan-button round type="danger" class="bottom-button">
           {{ t('button') }}
-        </van-button>
-      </van-empty>
+        </bvan-button>
+      </bvan-empty>
     </demo-block>
   </demo-section>
 </template>
