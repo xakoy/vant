@@ -1,7 +1,7 @@
 {
-  "name": "vant",
-  "version": "2.6.0-beta.0",
-  "description": "Mobile UI Components built on Vue",
+  "name": "@belvoly-vue-aioa/bvant",
+  "version": "0.1.0",
+  "description": "Mobile UI Components built base vant",
   "main": "lib/index.js",
   "module": "es/index.js",
   "style": "lib/index.css",
@@ -37,15 +37,11 @@
       "git add"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:youzan/vant.git"
-  },
   "keywords": [
     "vue",
     "component"
   ],
-  "author": "youzanfe",
+  "author": "xakoy",
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "7.x",

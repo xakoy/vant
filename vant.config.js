@@ -10,32 +10,20 @@ module.exports = {
     },
   },
   site: {
-    defaultLang: 'en-US',
-    versions: [{ label: '1.x', link: 'https://youzan.github.io/vant/1.x/' }],
+    defaultLang: 'zh-CN',
+    versions: [],
     baiduAnalytics: {
       seed: 'ad6b5732c36321f2dafed737ac2da92f',
     },
     locales: {
       'zh-CN': {
-        title: 'Vant',
-        description: '轻量、可靠的移动端 Vue 组件库',
+        title: 'belvoly-vant',
+        description: '基于vant更改的移动UI组件库',
         logo: 'https://img.yzcdn.cn/vant/logo.png',
         langLabel: '中文',
         links: [
-          {
-            logo: 'https://b.yzcdn.cn/vant/logo/weapp.svg',
-            url: '/vant-weapp',
-          },
-          {
-            logo: 'https://b.yzcdn.cn/vant/logo/github.svg',
-            url: 'https://github.com/youzan/vant',
-          },
         ],
-        searchConfig: {
-          apiKey: '90067aecdaa2c85220e2783cd305caac',
-          indexName: 'vant',
-          placeholder: '搜索文档...',
-        },
+
         nav: [
           {
             title: '开发指南',
@@ -51,26 +39,6 @@ module.exports = {
               {
                 path: 'changelog',
                 title: '更新日志',
-              },
-              {
-                path: 'theme',
-                title: '定制主题',
-              },
-              {
-                path: 'contribution',
-                title: '开发指南',
-              },
-              {
-                path: 'design',
-                title: '设计资源',
-              },
-              {
-                path: 'style-guide',
-                title: '风格指南',
-              },
-              {
-                path: 'locale',
-                title: '国际化',
               },
             ],
           },
