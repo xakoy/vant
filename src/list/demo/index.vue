@@ -1,42 +1,42 @@
 <template>
   <demo-section>
-    <van-tabs>
-      <van-tab :title="t('basicUsage')">
-        <van-list
+    <bvan-tabs>
+      <bvan-tab :title="t('basicUsage')">
+        <bvan-list
           v-model="list[0].loading"
           :finished="list[0].finished"
           :finished-text="t('finishedText')"
           @load="onLoad(0)"
         >
-          <van-cell v-for="item in list[0].items" :key="item" :title="item" />
-        </van-list>
-      </van-tab>
+          <bvan-cell v-for="item in list[0].items" :key="item" :title="item" />
+        </bvan-list>
+      </bvan-tab>
 
-      <van-tab :title="t('errorInfo')">
-        <van-list
+      <bvan-tab :title="t('errorInfo')">
+        <bvan-list
           v-model="list[1].loading"
           :finished="list[1].finished"
           :error.sync="list[1].error"
           :error-text="t('errorText')"
           @load="onLoad(1)"
         >
-          <van-cell v-for="item in list[1].items" :key="item" :title="item" />
-        </van-list>
-      </van-tab>
+          <bvan-cell v-for="item in list[1].items" :key="item" :title="item" />
+        </bvan-list>
+      </bvan-tab>
 
-      <van-tab :title="t('pullRefresh')">
-        <van-pull-refresh v-model="list[2].refreshing" @refresh="onRefresh(2)">
-          <van-list
+      <bvan-tab :title="t('pullRefresh')">
+        <bvan-pull-refresh v-model="list[2].refreshing" @refresh="onRefresh(2)">
+          <bvan-list
             v-model="list[2].loading"
             :finished="list[2].finished"
             :finished-text="t('finishedText')"
             @load="onLoad(2)"
           >
-            <van-cell v-for="item in list[2].items" :key="item" :title="item" />
-          </van-list>
-        </van-pull-refresh>
-      </van-tab>
-    </van-tabs>
+            <bvan-cell v-for="item in list[2].items" :key="item" :title="item" />
+          </bvan-list>
+        </bvan-pull-refresh>
+      </bvan-tab>
+    </bvan-tabs>
   </demo-section>
 </template>
 
@@ -129,7 +129,7 @@ export default {
 @import '../../style/var';
 
 .demo-list {
-  .van-cell {
+  .@{module}-cell {
     text-align: center;
   }
 
@@ -149,7 +149,7 @@ export default {
     }
   }
 
-  .van-checkbox__label {
+  .@{module}-checkbox__label {
     color: @gray-7;
   }
 }
