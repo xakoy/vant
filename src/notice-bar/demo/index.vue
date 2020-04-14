@@ -1,24 +1,24 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-notice-bar :text="t('text')" left-icon="volume-o" />
+      <bvan-notice-bar :text="t('text')" left-icon="volume-o" />
     </demo-block>
 
     <demo-block :title="t('unscrollable')">
-      <van-notice-bar :scrollable="false" :text="t('text')" />
+      <bvan-notice-bar :scrollable="false" :text="t('text')" />
     </demo-block>
 
     <demo-block :title="t('wrapable')">
-      <van-notice-bar wrapable :scrollable="false" :text="t('text')" />
+      <bvan-notice-bar wrapable :scrollable="false" :text="t('text')" />
     </demo-block>
 
     <demo-block :title="t('mode')">
-      <van-notice-bar mode="closeable" :text="t('text')" />
-      <van-notice-bar mode="link" :text="t('text')" />
+      <bvan-notice-bar mode="closeable" :text="t('text')" />
+      <bvan-notice-bar mode="link" :text="t('text')" />
     </demo-block>
 
     <demo-block :title="t('customStyle')">
-      <van-notice-bar
+      <bvan-notice-bar
         :text="t('text')"
         color="#1989fa"
         background="#ecf9ff"
@@ -57,7 +57,7 @@ export default {
 .demo-notice-bar {
   background: @white;
 
-  .van-notice-bar:not(:first-of-type) {
+  .@{module}-notice-bar:not(:first-of-type) {
     margin-top: 4px;
   }
 
