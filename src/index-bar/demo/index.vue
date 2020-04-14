@@ -1,30 +1,30 @@
 <template>
   <demo-section>
-    <van-tabs v-model="activeTab" :color="BLUE">
-      <van-tab :title="t('basicUsage')">
-        <van-index-bar>
+    <bvan-tabs v-model="activeTab" :color="BLUE">
+      <bvan-tab :title="t('basicUsage')">
+        <bvan-index-bar>
           <div v-for="index in indexList" :key="index">
-            <van-index-anchor :index="index" />
-            <van-cell :title="t('text')" />
-            <van-cell :title="t('text')" />
-            <van-cell :title="t('text')" />
+            <bvan-index-anchor :index="index" />
+            <bvan-cell :title="t('text')" />
+            <bvan-cell :title="t('text')" />
+            <bvan-cell :title="t('text')" />
           </div>
-        </van-index-bar>
-      </van-tab>
+        </bvan-index-bar>
+      </bvan-tab>
 
-      <van-tab :title="t('customIndexList')">
-        <van-index-bar :index-list="customIndexList">
+      <bvan-tab :title="t('customIndexList')">
+        <bvan-index-bar :index-list="customIndexList">
           <div v-for="index in customIndexList" :key="index">
-            <van-index-anchor :index="index">
+            <bvan-index-anchor :index="index">
               {{ t('title') + index }}
-            </van-index-anchor>
-            <van-cell :title="t('text')" />
-            <van-cell :title="t('text')" />
-            <van-cell :title="t('text')" />
+            </bvan-index-anchor>
+            <bvan-cell :title="t('text')" />
+            <bvan-cell :title="t('text')" />
+            <bvan-cell :title="t('text')" />
           </div>
-        </van-index-bar>
-      </van-tab>
-    </van-tabs>
+        </bvan-index-bar>
+      </bvan-tab>
+    </bvan-tabs>
   </demo-section>
 </template>
 
