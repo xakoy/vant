@@ -1,42 +1,42 @@
 <template>
   <demo-section>
-    <van-grid :column-num="2" :border="false">
-      <van-grid-item>
+    <bvan-grid :column-num="2" :border="false">
+      <bvan-grid-item>
         <h3 class="demo-sidebar-title">{{ t('basicUsage') }}</h3>
-        <van-sidebar v-model="activeKey1">
-          <van-sidebar-item :title="t('title')" />
-          <van-sidebar-item :title="t('title')" />
-          <van-sidebar-item :title="t('title')" />
-        </van-sidebar>
-      </van-grid-item>
+        <bvan-sidebar v-model="activeKey1">
+          <bvan-sidebar-item :title="t('title')" />
+          <bvan-sidebar-item :title="t('title')" />
+          <bvan-sidebar-item :title="t('title')" />
+        </bvan-sidebar>
+      </bvan-grid-item>
 
-      <van-grid-item>
+      <bvan-grid-item>
         <h3 class="demo-sidebar-title">{{ t('showBadge') }}</h3>
-        <van-sidebar v-model="activeKey2">
-          <van-sidebar-item :title="t('title')" dot />
-          <van-sidebar-item :title="t('title')" badge="5" />
-          <van-sidebar-item :title="t('title')" badge="99+" />
-        </van-sidebar>
-      </van-grid-item>
+        <bvan-sidebar v-model="activeKey2">
+          <bvan-sidebar-item :title="t('title')" dot />
+          <bvan-sidebar-item :title="t('title')" badge="5" />
+          <bvan-sidebar-item :title="t('title')" badge="99+" />
+        </bvan-sidebar>
+      </bvan-grid-item>
 
-      <van-grid-item>
+      <bvan-grid-item>
         <h3 class="demo-sidebar-title">{{ t('disabled') }}</h3>
-        <van-sidebar v-model="activeKey3">
-          <van-sidebar-item :title="t('title')" />
-          <van-sidebar-item :title="t('title')" disabled />
-          <van-sidebar-item :title="t('title')" />
-        </van-sidebar>
-      </van-grid-item>
+        <bvan-sidebar v-model="activeKey3">
+          <bvan-sidebar-item :title="t('title')" />
+          <bvan-sidebar-item :title="t('title')" disabled />
+          <bvan-sidebar-item :title="t('title')" />
+        </bvan-sidebar>
+      </bvan-grid-item>
 
-      <van-grid-item>
+      <bvan-grid-item>
         <h3 class="demo-sidebar-title">{{ t('changeEvent') }}</h3>
-        <van-sidebar v-model="activeKey4" @change="onChange">
-          <van-sidebar-item :title="t('title') + 1" />
-          <van-sidebar-item :title="t('title') + 2" />
-          <van-sidebar-item :title="t('title') + 3" />
-        </van-sidebar>
-      </van-grid-item>
-    </van-grid>
+        <bvan-sidebar v-model="activeKey4" @change="onChange">
+          <bvan-sidebar-item :title="t('title') + 1" />
+          <bvan-sidebar-item :title="t('title') + 2" />
+          <bvan-sidebar-item :title="t('title') + 3" />
+        </bvan-sidebar>
+      </bvan-grid-item>
+    </bvan-grid>
   </demo-section>
 </template>
 
