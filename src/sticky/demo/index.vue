@@ -1,28 +1,28 @@
 <template>
   <demo-section>
     <demo-block :title="t('basicUsage')">
-      <van-sticky>
-        <van-button type="primary" style="margin-left: 15px;">
+      <bvan-sticky>
+        <bvan-button type="primary" style="margin-left: 15px;">
           {{ t('basicUsage') }}
-        </van-button>
-      </van-sticky>
+        </bvan-button>
+      </bvan-sticky>
     </demo-block>
 
     <demo-block :title="t('offsetTop')">
-      <van-sticky :offset-top="50">
-        <van-button type="info" style="margin-left: 115px;">
+      <bvan-sticky :offset-top="50">
+        <bvan-button type="info" style="margin-left: 115px;">
           {{ t('offsetTop') }}
-        </van-button>
-      </van-sticky>
+        </bvan-button>
+      </bvan-sticky>
     </demo-block>
 
     <demo-block v-if="!isWeapp" :title="t('setContainer')">
       <div ref="container" style="height: 150px; background-color: #fff;">
-        <van-sticky :container="container">
-          <van-button type="warning" style="margin-left: 215px;">
+        <bvan-sticky :container="container">
+          <bvan-button type="warning" style="margin-left: 215px;">
             {{ t('setContainer') }}
-          </van-button>
-        </van-sticky>
+          </bvan-button>
+        </bvan-sticky>
       </div>
     </demo-block>
   </demo-section>
@@ -59,7 +59,7 @@ export default {
 .demo-sticky {
   height: 200vh;
 
-  .van-button {
+  .@{module}-button {
     margin-left: @padding-md;
   }
 }
