@@ -79,13 +79,17 @@
       box-sizing: border-box;
       height: @tabs-card-height;
       margin: 0 @padding-md;
+      // padding: @padding-xs 0;
       border: @border-width-base solid @tabs-default-color;
       border-radius: @border-radius-sm;
-
+      overflow: hidden;
+      
       .@{module}-tab {
-        color: @tabs-default-color;
+        min-width: @tabs-card-tab-min-width;
+        color: @tab-text-color;
+        background-color: @tabs-default-color;
         line-height: @tabs-card-height - 2px;
-        border-right: @border-width-base solid @tabs-default-color;
+        border-right: @border-width-base solid @tabs-card-border-color;
 
         &:last-child {
           border-right: none;
@@ -93,13 +97,15 @@
 
         &.@{module}-tab--active {
           color: @white;
-          background-color: @tabs-default-color;
+          background-color: @tabs-card-active-background-color;
         }
 
         &--disabled {
           color: @tab-disabled-text-color;
         }
       }
+
+      
     }
   }
 
@@ -136,6 +142,18 @@
   &--card {
     > .@{module}-tabs__wrap {
       height: @tabs-card-height;
+      background-color: @tabs-card-background-color;
+      padding: @padding-xs 0;
+      text-align: center;
+    }
+  }
+  &--card--center {
+    .@{module}-tabs__nav--card{
+      display: inline-block;
+      text-align: center;
+      .@{module}-tab {
+        display: inline-block;
+      }
     }
   }
 }

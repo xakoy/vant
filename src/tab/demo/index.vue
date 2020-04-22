@@ -43,6 +43,12 @@
           {{ t('content') }} {{ index }}
         </bvan-tab>
       </bvan-tabs>
+
+      <bvan-tabs type="card" :card-center="true">
+        <bvan-tab v-for="index in 3" :title="t('tab') + index" :key="index">
+          {{ t('content') }} {{ index }}
+        </bvan-tab>
+      </bvan-tabs>
     </demo-block>
 
     <demo-block :title="t('title5')">

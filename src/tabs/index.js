@@ -4,7 +4,7 @@ import { scrollLeftTo, scrollTopTo } from './utils';
 import { route } from '../utils/router';
 import { isHidden } from '../utils/dom/style';
 import { on, off } from '../utils/dom/event';
-import { BORDER_TOP_BOTTOM } from '../utils/constant';
+import { BORDER_TOP_BOTTOM, BORDER_BOTTOM } from '../utils/constant';
 import {
   getScroller,
   getVisibleTop,
@@ -58,6 +58,10 @@ export default createComponent({
     type: {
       type: String,
       default: 'line',
+    },
+    cardCenter: {
+      type: Boolean,
+      default: false,
     },
     active: {
       type: [Number, String],
@@ -337,7 +341,7 @@ export default createComponent({
   },
 
   render() {
-    const { type, ellipsis, animated, scrollable } = this;
+    const { type, ellipsis, animated, scrollable, cardCenter } = this;
 
     const Nav = this.children.map((item, index) => (
       <Title
@@ -372,6 +376,7 @@ export default createComponent({
         class={[
           bem('wrap', { scrollable }),
           { [BORDER_TOP_BOTTOM]: type === 'line' && this.border },
+          { [BORDER_BOTTOM]: cardCenter },
         ]}
       >
         <div
@@ -391,7 +396,7 @@ export default createComponent({
     );
 
     return (
-      <div class={bem([type])}>
+      <div class={bem([type, cardCenter ? (type + '--center') : null])}>
         {this.sticky ? (
           <Sticky
             container={this.$el}
