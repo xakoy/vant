@@ -117,6 +117,20 @@ Vue.use(Button);
 <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)">渐变色按钮</van-button>
 ```
 
+### 分组
+通过`ButtonGroup`组件
+```html
+<bvan-button-group>
+    <bvan-button square color="#7232dd" />
+    <bvan-button square plain color="#7232dd" />
+    <bvan-button
+        square
+        color="linear-gradient(to right, #4bb0ff, #6149f6)"
+        :text="t('gradient')"
+    />
+</bvan-button-group>
+```
+
 ## API
 
 ### Props

@@ -75,6 +75,17 @@
         :text="t('gradient')"
       />
     </demo-block>
+    <demo-block title="组">
+      <bvan-button-group>
+        <bvan-button square color="#7232dd" :text="t('pure')" />
+        <bvan-button square plain color="#7232dd" :text="t('pure')" />
+        <bvan-button
+          square
+          color="linear-gradient(to right, #4bb0ff, #6149f6)"
+          :text="t('gradient')"
+        />
+      </bvan-button-group>
+    </demo-block>
   </demo-section>
 </template>
 
@@ -157,6 +168,12 @@ export default {
     &--small,
     &--normal:not(:last-child) {
       margin-right: @padding-md;
+    }
+  }
+
+  .@{module}-button-group {
+    .@{module}-button {
+      margin: 0;
     }
   }
 
