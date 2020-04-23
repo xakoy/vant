@@ -379,6 +379,7 @@ export default createComponent({
           { [BORDER_BOTTOM]: cardCenter },
         ]}
       >
+        {this.slots('top-left') ? <div class={bem('top', 'left')}>{this.slots('top-left')}</div> : null}
         <div
           ref="nav"
           role="tablist"
@@ -392,6 +393,7 @@ export default createComponent({
           )}
           {this.slots('nav-right')}
         </div>
+        {this.slots('top-right') ? <div class={bem('top', 'right')}>{this.slots('top-right')}</div> : null}
       </div>
     );
 

@@ -48,6 +48,9 @@
         <bvan-tab v-for="index in 3" :title="t('tab') + index" :key="index">
           {{ t('content') }} {{ index }}
         </bvan-tab>
+        <template v-slot:top-left>
+          <div>left</div>
+        </template>
       </bvan-tabs>
     </demo-block>
 

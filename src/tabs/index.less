@@ -80,7 +80,7 @@
       height: @tabs-card-height;
       margin: 0 @padding-md;
       // padding: @padding-xs 0;
-      border: @border-width-base solid @tabs-default-color;
+      // border: @border-width-base solid @tabs-default-color;
       border-radius: @border-radius-sm;
       overflow: hidden;
       
@@ -148,8 +148,23 @@
     }
   }
   &--card--center {
+    .@{module}-tabs__wrap {
+      position: relative;
+    }
+    .@{module}-tabs__top{
+      position: absolute;
+      line-height: 28px;
+      z-index: 1;
+      top: @padding-xs;
+      &--left{
+        left: @padding-md
+      }
+      &--right{
+        right: @padding-md;
+      }
+    }
     .@{module}-tabs__nav--card{
-      display: inline-block;
+      display: block;
       text-align: center;
       .@{module}-tab {
         display: inline-block;
