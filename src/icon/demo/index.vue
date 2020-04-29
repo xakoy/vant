@@ -1,83 +1,83 @@
 <template>
   <demo-section>
-    <van-tabs v-model="tab" sticky :color="BLUE">
-      <van-tab :title="t('demo')">
+    <bvan-tabs v-model="tab" sticky :color="BLUE">
+      <bvan-tab :title="t('demo')">
         <demo-block :title="t('basicUsage')">
-          <van-col span="6" @click="copy(demoIcon)">
-            <van-icon :name="demoIcon" />
-          </van-col>
-          <van-col span="6" @click="copy(demoImage)">
-            <van-icon :name="demoImage" />
-          </van-col>
+          <bvan-col span="6" @click="copy(demoIcon)">
+            <bvan-icon :name="demoIcon" />
+          </bvan-col>
+          <bvan-col span="6" @click="copy(demoImage)">
+            <bvan-icon :name="demoImage" />
+          </bvan-col>
         </demo-block>
 
         <demo-block :title="t('badge')">
-          <van-col span="6" @click="copy(demoIcon, { dot: true })">
-            <van-icon :name="demoIcon" dot />
-          </van-col>
-          <van-col span="6" @click="copy(demoIcon, { badge: '9' })">
-            <van-icon :name="demoIcon" badge="9" />
-          </van-col>
-          <van-col span="6" @click="copy(demoIcon, { badge: '99+' })">
-            <van-icon :name="demoIcon" badge="99+" />
-          </van-col>
+          <bvan-col span="6" @click="copy(demoIcon, { dot: true })">
+            <bvan-icon :name="demoIcon" dot />
+          </bvan-col>
+          <bvan-col span="6" @click="copy(demoIcon, { badge: '9' })">
+            <bvan-icon :name="demoIcon" badge="9" />
+          </bvan-col>
+          <bvan-col span="6" @click="copy(demoIcon, { badge: '99+' })">
+            <bvan-icon :name="demoIcon" badge="99+" />
+          </bvan-col>
         </demo-block>
 
         <demo-block :title="t('color')">
-          <van-col span="6" @click="copy(demoIcon, { color: BLUE })">
-            <van-icon :name="demoIcon" :color="BLUE" />
-          </van-col>
-          <van-col span="6" @click="copy(demoIcon, { color: GREEN })">
-            <van-icon :name="demoIcon" :color="GREEN" />
-          </van-col>
+          <bvan-col span="6" @click="copy(demoIcon, { color: BLUE })">
+            <bvan-icon :name="demoIcon" :color="BLUE" />
+          </bvan-col>
+          <bvan-col span="6" @click="copy(demoIcon, { color: GREEN })">
+            <bvan-icon :name="demoIcon" :color="GREEN" />
+          </bvan-col>
         </demo-block>
 
         <demo-block :title="t('size')">
-          <van-col span="6" @click="copy(demoIcon, { size: '40' })">
-            <van-icon :name="demoIcon" size="40" />
-          </van-col>
-          <van-col span="6" @click="copy(demoIcon, { size: '3rem' })">
-            <van-icon :name="demoIcon" size="3rem" />
-          </van-col>
+          <bvan-col span="6" @click="copy(demoIcon, { size: '40' })">
+            <bvan-icon :name="demoIcon" size="40" />
+          </bvan-col>
+          <bvan-col span="6" @click="copy(demoIcon, { size: '3rem' })">
+            <bvan-icon :name="demoIcon" size="3rem" />
+          </bvan-col>
         </demo-block>
-      </van-tab>
+      </bvan-tab>
 
-      <van-tab :title="t('basic')">
-        <van-col
+      <bvan-tab :title="t('basic')">
+        <bvan-col
           v-for="icon in icons.basic"
           :key="icon"
           span="6"
           @click="copy(icon)"
         >
-          <van-icon :name="icon" />
+          <bvan-icon :name="icon" />
           <span>{{ icon }}</span>
-        </van-col>
-      </van-tab>
+        </bvan-col>
+      </bvan-tab>
 
-      <van-tab :title="t('outline')">
-        <van-col
+      <bvan-tab :title="t('outline')">
+        <bvan-col
           v-for="icon in icons.outline"
           :key="icon"
           span="6"
           @click="copy(icon)"
         >
-          <van-icon :name="icon" />
+          <bvan-icon :name="icon" />
           <span>{{ icon }}</span>
-        </van-col>
-      </van-tab>
+        </bvan-col>
+      </bvan-tab>
 
-      <van-tab :title="t('filled')">
-        <van-col
+      <bvan-tab :title="t('filled')">
+        <bvan-col
           v-for="icon in icons.filled"
           :key="icon"
           span="6"
           @click="copy(icon)"
         >
-          <van-icon :name="icon" />
+          <bvan-icon :name="icon" />
           <span>{{ icon }}</span>
-        </van-col>
-      </van-tab>
-    </van-tabs>
+        </bvan-col>
+      </bvan-tab>
+    </bvan-tabs>
   </demo-section>
 </template>
 
@@ -148,7 +148,7 @@ export default {
 
   methods: {
     copy(icon, option = {}) {
-      let tag = `<van-icon name="${icon}"`;
+      let tag = `<bvan-icon name="${icon}"`;
       if ('dot' in option) {
         tag = `${tag} ${option.dot ? 'dot' : ''}`;
       }
@@ -191,7 +191,7 @@ export default {
     font-size: 13px;
   }
 
-  .van-col {
+  .bvan-col {
     display: inline-block;
     float: none;
     text-align: center;
@@ -213,13 +213,13 @@ export default {
     }
   }
 
-  .van-icon {
+  .bvan-icon {
     margin: 16px 0 16px;
     color: @text-color;
     font-size: 32px;
   }
 
-  .van-tab__pane {
+  .bvan-tab__pane {
     width: auto;
     margin: 20px;
     background-color: #fff;
