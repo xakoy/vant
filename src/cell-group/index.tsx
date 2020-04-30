@@ -9,11 +9,13 @@ import { DefaultSlots, ScopedSlot } from '../utils/types';
 
 export type CellGroupProps = {
   title?: string;
+  value?: string;
   border: boolean;
 };
 
 export type CellGroupSlots = DefaultSlots & {
   title?: ScopedSlot;
+  value?: ScopedSlot;
 };
 
 const [createComponent, bem] = createNamespace('cell-group');
@@ -33,11 +35,25 @@ function CellGroup(
     </div>
   );
 
-  if (props.title || slots.title) {
+  function Value() {
+    const isShowValue = props.value || slots.value
+    if(isShowValue){
+      return (
+        <div class={bem('title-value')}>
+          {slots.value ? slots.value() : props.value}
+        </div>
+      )
+    }
+  }
+
+  if ((props.title || slots.title) || (props.value || slots.value)) {
     return (
       <div>
         <div class={bem('title')}>
-          {slots.title ? slots.title() : props.title}
+          <div class={bem('title-text')}>
+            {slots.title ? slots.title() : props.title}
+          </div>
+          {Value()}
         </div>
         {Group}
       </div>

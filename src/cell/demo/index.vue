@@ -52,6 +52,16 @@
       <bvan-cell-group :title="`${t('group')} 2`">
         <bvan-cell :title="t('cell')" :value="t('content')" />
       </bvan-cell-group>
+
+      <bvan-cell-group title="分组" value="内容">
+        <bvan-cell :title="t('cell')" :value="t('content')" />
+      </bvan-cell-group>
+      <bvan-cell-group>
+        <template #value>
+          <bvan-icon name="plus" /> 新增分组
+        </template>
+        <bvan-cell :title="t('cell')" :value="t('content')" />
+      </bvan-cell-group>
     </demo-block>
 
     <demo-block :title="t('useSlots')">

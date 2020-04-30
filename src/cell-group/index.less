@@ -5,8 +5,20 @@
 
   &__title {
     padding: @cell-group-title-padding;
-    color: @cell-group-title-color;
-    font-size: @cell-group-title-font-size;
     line-height: @cell-group-title-line-height;
+    display: flex;
+    &-text {
+      color: @cell-group-title-color;
+      font-size: @cell-group-title-font-size;
+      flex: 1;
+    }
+    &-value {
+      text-align: right;
+      font-size: 12px;
+      color: @cell-group-title-color;
+      > * {
+        vertical-align: text-top;
+      }
+    }
   }
 }

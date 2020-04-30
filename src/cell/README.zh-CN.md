@@ -72,12 +72,18 @@ Vue.use(CellGroup);
 通过`CellGroup`的`title`属性可以指定分组标题
 
 ```html
-<van-cell-group title="分组1">
-  <van-cell title="单元格" value="内容" />
-</van-cell-group>
-<van-cell-group title="分组2">
-  <van-cell title="单元格" value="内容" />
-</van-cell-group>
+<bvan-cell-group title="分组1">
+  <bvan-cell title="单元格" value="内容" />
+</bvan-cell-group>
+<bvan-cell-group title="分组2">
+  <bvan-cell title="单元格" value="内容" />
+</bvan-cell-group>
+<bvan-cell-group>
+  <template #value>
+    <bvan-icon name="plus" /> 新增分组
+  </template>
+  <bvan-cell :title="单元格" :value="内容" />
+</bvan-cell-group>
 ```
 
 ### 使用插槽
@@ -120,6 +126,7 @@ Vue.use(CellGroup);
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | title | 分组标题 | *string* | `-` |
+| value | 分组内容 | *string* | `-` |
 | border | 是否显示外边框 | *boolean* | `true` |
 
 ### Cell Props
@@ -158,6 +165,7 @@ Vue.use(CellGroup);
 |------|------|
 | default | 默认插槽 |
 | title | 自定义分组标题 |
+| value | 自定义分组内容 |
 
 ### Cell Slots
 
