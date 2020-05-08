@@ -141,6 +141,10 @@ module.exports = {
               { path: 'datetime-picker-field',
                 title: 'DatetimePicker 时间选择结合field',
               },
+              {
+                path: 'picker-field',
+                title: 'Picker 结合 field',
+              },
             ],
           },
           {
