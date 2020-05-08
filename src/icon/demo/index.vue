@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import icons from '@vant/icons';
+import icons from '@belvoly-vue-aioa/bvant-icons';
 import { BLUE, GREEN } from '../../utils/constant';
 
 // from https://30secondsofcode.org
