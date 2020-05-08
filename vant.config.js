@@ -138,6 +138,9 @@ module.exports = {
                 path: 'uploader',
                 title: 'Uploader 文件上传',
               },
+              { path: 'datetime-picker-field',
+                title: 'DatetimePicker 时间选择结合field',
+              },
             ],
           },
           {

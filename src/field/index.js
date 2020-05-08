@@ -554,6 +554,7 @@ export default createComponent({
         onClick={this.onClick}
       >
         <div class={bem('body')}>
+          {slots('default')}
           {this.genInput()}
           {this.showClear && (
             <Icon
