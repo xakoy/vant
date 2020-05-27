@@ -18,6 +18,7 @@
     "lint": "vant-cli lint && ls-lint",
     "test": "vant-cli test",
     "build": "vant-cli build",
+    "build:doc": "vant-cli build-site && xcopy .\\site \\\\192.168.101.6\\d$\\Publish\\BSDN\\bvant\\ /s /e /y",
     "release": "vant-cli release",
     "test:watch": "vant-cli test --watch",
     "release:site": "sh docs/site/release.sh",

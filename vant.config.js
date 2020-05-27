@@ -3,7 +3,7 @@ module.exports = {
   build: {
     skipInstall: ['lazyload'],
     site: {
-      publicPath: 'https://b.yzcdn.cn/vant/',
+      publicPath: 'http://bsdn.beyondbit.com/frontend/bvant/',
     },
     vetur: {
       tagPrefix: 'bvan-',
@@ -12,9 +12,6 @@ module.exports = {
   site: {
     defaultLang: 'en-US',
     versions: [],
-    baiduAnalytics: {
-      seed: 'ad6b5732c36321f2dafed737ac2da92f',
-    },
     locales: {
       'zh-CN': {
         title: 'belvoly-vant',
