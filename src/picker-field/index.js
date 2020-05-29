@@ -91,9 +91,9 @@ const s = {
       this.val = item[this.valueKey];
       this.text = item[this.textKey];
 
-      this.$emit('update:textValue', item.text);
-      this.$emit('input', item.value);
-      this.$emit('change', item.value, item);
+      this.$emit('update:textValue', this.text);
+      this.$emit('input', this.val);
+      this.$emit('change', this.val, item);
     },
   },
   render() {
