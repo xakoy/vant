@@ -42,7 +42,7 @@ export default {
 | required | 是否显示表单必填星号 | *boolean* | `false` |
 | error | 是否将输入内容标红 | *boolean* | `false` |
 | error-message | 底部错误提示文案，为空时不展示 | *string* | - |
-| formatter `v2.4.2` | 输入内容格式化函数 | *Function* | - |
+| value-format | 内容格式化函数, YYYY-MM-DD类似moment的格式 | *string* | - |
 | label-class | 左侧文本额外类名 | *any* | - |
 | label-width | 左侧文本宽度，默认单位为`px` | *number \| string* | `90px` |
 | label-align | 左侧文本对齐方式，可选值为 `center` `right` | *string* | `left` |
