@@ -28,3 +28,9 @@ Vue.use(Button);
 ## 开源协议
 
 本项目基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89) 协议，请自由地享受和参与开源。
+
+
+## 更新
+### v 0.1.2
+1. 修复`picker-field`,在设置了`text-key`, `value-key`后，无法获取到值
+2. 更新`datetime-picker-field`的属性`value-format`文档
