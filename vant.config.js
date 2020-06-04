@@ -187,6 +187,10 @@ module.exports = {
                 path: 'toast',
                 title: 'Toast 轻提示',
               },
+              {
+                path: 'popup-menu',
+                title: 'PopupMenu 弹出菜单',
+              },
             ],
           },
           {

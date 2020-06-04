@@ -31,6 +31,11 @@ Vue.use(Button);
 
 
 ## 更新
+
+### v
+1. 调整 `tab` 组件默认的样式，为蓝色
+2. 添加 `popup-menu` 组件
+
 ### v 0.1.2
 1. 修复`picker-field`,在设置了`text-key`, `value-key`后，无法获取到值
 2. 更新`datetime-picker-field`的属性`value-format`文档

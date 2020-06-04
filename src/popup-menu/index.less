@@ -1,0 +1,64 @@
+@import '../style/var';
+body {
+    color: red;
+}
+.@{module}-popup-menu {
+    &__warp {
+        position: relative;
+    }
+    position: absolute;
+    opacity: 0.7;
+    color: #ffffff; 
+
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: 8px;
+        width: 0px;
+        height: 0px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 12px solid #333;
+    }
+    padding-top: 8px;
+
+    &__items {
+        position: relative;
+        background: #333333;
+        border-radius: 4px;
+        font-size: 14px;
+        overflow: hidden;
+
+        dl {
+            display: flex;
+            line-height: 40px;
+            padding: 0;
+            margin: 0;
+            padding-left: 16px;
+            
+
+            &:active {
+                background: #666666;
+            }
+            dt {
+                width: 20px;
+
+            }
+            dd {
+                flex: 1;
+                padding-right: 16px;
+                border-bottom: 0.5px solid #979797;
+                margin: 0;
+            }
+            &:last-of-type dd {
+                border-bottom: none;
+            }
+        }
+    }
+    &-item {
+        &__left-icon{
+            vertical-align: -0.15em;
+        }
+    }
+}
