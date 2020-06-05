@@ -199,6 +199,7 @@ export default {
 |------|------|------|------|
 | v-model | 绑定当前选中标签的标识符 | *number \| string* | `0` |
 | type | 样式风格类型，可选值为`card` | *string* | `line` |
+| card-center | card模式下是否居中 | *boolean* | `false` |
 | color | 标签主题色 | *string* | `#ee0a24` |
 | background | 标签栏背景色 | *string* | `white` |
 | duration | 动画时间，单位秒 | *number \| string* | `0.3` |
