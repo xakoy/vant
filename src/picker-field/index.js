@@ -73,7 +73,7 @@ const s = {
       return this.$refs.picker;
     },
     changeValueHandler(val) {
-      if (val) {
+      if (val !== null && val !== undefined) {
         const index = this.columns.findIndex(item => item[this.valueKey] === val);
         if (index > -1) {
           const item = this.columns[index];

@@ -3,6 +3,10 @@
     <demo-block title="基本">
       <bvan-picker-field v-model="c" label="城市" show-toolbar :columns="singleColumns" @change="onChange1" />
     </demo-block>
+
+    <demo-block title="数字值">
+      <bvan-picker-field v-model="num" label="类型" show-toolbar :columns="singleNums"/>
+    </demo-block>
   </demo-section>
 </template>
 
@@ -15,6 +19,14 @@ export default {
         text: '一', value: '1',
       }, {
         text: '二', value: '2',
+      }],
+      num: null,
+      singleNums: [{
+        text: '零',
+        value: 0
+      },{
+        text: '一',
+        value: 1
       }],
       multipleColumns: [{
         values: [{

@@ -31,6 +31,28 @@ export default {
 }
 ```
 
+### 值类型
+
+```html
+<bvan-picker-field v-model="num" label="类型" show-toolbar :columns="singleNums"/>
+```
+
+```js
+export default {
+  data() {
+    return {
+      num: null,
+      singleNums: [{
+        text: '零',
+        value: 0
+      },{
+        text: '一',
+        value: 1
+      }],
+    };
+  }
+}
+```
 
 ## API
 
