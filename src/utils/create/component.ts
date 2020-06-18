@@ -38,7 +38,7 @@ function install(this: ComponentOptions<Vue>, Vue: VueConstructor) {
 }
 
 // unify slots & scopedSlots
-export function unifySlots(context: RenderContext) {
+export function unifySlots(context: RenderContext): any {
   // use data.scopedSlots in lower Vue version
   const scopedSlots = context.scopedSlots || context.data.scopedSlots || {};
   const slots = context.slots();

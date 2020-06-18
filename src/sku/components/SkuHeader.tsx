@@ -31,7 +31,7 @@ function getSkuImg(
     const id = selectedSku[item.k_s];
 
     if (id && item.v) {
-      const matchedSku =
+      const matchedSku:any =
         item.v.filter((skuValue) => skuValue.id === id)[0] || {};
       img = matchedSku.previewImgUrl || matchedSku.imgUrl || matchedSku.img_url;
       return img;

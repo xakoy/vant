@@ -17,6 +17,7 @@ export type SkuTreeItemData = {
   k: string;
   v: SkuTreeItemValueData[];
   k_s: string;
+  is_multiple: boolean;
 };
 
 export type SkuTreeItemValueData = {
