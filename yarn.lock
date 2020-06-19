@@ -838,9 +838,10 @@
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
 
-"@belvoly-vue-aioa/bvant-icons@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@belvoly-vue-aioa/bvant-icons/-/bvant-icons-1.2.1.tgz#6e9faec9a32f0d333a47f897d8f1e57b4ea71429"
+"@belvoly-vue-aioa/bvant-icons@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@belvoly-vue-aioa/bvant-icons/-/bvant-icons-1.2.2.tgz#586b3f41411bf2df1f4a0457521d7298817ef7c1"
+  integrity sha512-bWxsLXd7DTXqPmo6ic7vm15A3MiZcXI7uibdrjGjU1SUCKpMCe5fuIF/q8WBxC1W2GxwCPEUhQABw1Qof5Hkvw==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
