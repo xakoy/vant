@@ -1,23 +1,23 @@
 <template>
   <demo-section>
     <demo-block :title="t('ellipsis')">
-      <div class="van-ellipsis">{{ t('text1') }}</div>
-      <div class="van-multi-ellipsis--l2">{{ t('text2') }}</div>
+      <div class="bvan-ellipsis">{{ t('text1') }}</div>
+      <div class="bvan-multi-ellipsis--l2">{{ t('text2') }}</div>
     </demo-block>
 
     <demo-block :title="t('hairline')">
-      <div class="van-hairline--top" />
+      <div class="bvan-hairline--top" />
     </demo-block>
 
     <demo-block :title="t('animation')">
-      <van-cell is-link title="Fade" @click="animate('van-fade')" />
-      <van-cell is-link title="Slide Up" @click="animate('van-slide-up')" />
-      <van-cell is-link title="Slide Down" @click="animate('van-slide-down')" />
-      <van-cell is-link title="Slide Left" @click="animate('van-slide-left')" />
-      <van-cell
+      <bvan-cell is-link title="Fade" @click="animate('bvan-fade')" />
+      <bvan-cell is-link title="Slide Up" @click="animate('bvan-slide-up')" />
+      <bvan-cell is-link title="Slide Down" @click="animate('bvan-slide-down')" />
+      <bvan-cell is-link title="Slide Left" @click="animate('bvan-slide-left')" />
+      <bvan-cell
         is-link
         title="Slide Right"
-        @click="animate('van-slide-right')"
+        @click="animate('bvan-slide-right')"
       />
     </demo-block>
 
@@ -75,19 +75,19 @@ export default {
 @import '../../style/var';
 
 .demo-style {
-  .van-ellipsis,
-  .van-multi-ellipsis--l2 {
+  .bvan-ellipsis,
+  .bvan-multi-ellipsis--l2 {
     max-width: 300px;
     margin-left: @padding-md;
     font-size: 14px;
     line-height: 18px;
   }
 
-  .van-ellipsis {
+  .bvan-ellipsis {
     margin-bottom: @padding-md;
   }
 
-  .van-hairline--top {
+  .bvan-hairline--top {
     height: 30px;
     background-color: @white;
 

@@ -1,13 +1,13 @@
 @import './var';
 @import './mixins/hairline';
 
-[class*='van-hairline'] {
+[class*=~'@{module}-hairline'] {
   &::after {
     .hairline();
   }
 }
 
-.van-hairline {
+.@{module}-hairline {
   &,
   &--top,
   &--left,
