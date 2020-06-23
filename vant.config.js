@@ -341,6 +341,19 @@ module.exports = {
             ],
           },
           {
+            title: 'M-UI 业务组件',
+            items: [
+              {
+                path: 'mui-choose-people-or-org',
+                title: 'ChoosePeopleOrOrg 选人控件',
+              },
+              {
+                path: 'mui-upload',
+                title: 'Upload 选人控件',
+              },
+            ],
+          },
+          {
             title: '废弃',
             items: [
               {
