@@ -19,6 +19,7 @@
     "test": "vant-cli test",
     "build": "vant-cli build",
     "build:doc": "vant-cli build-site && xcopy .\\site \\\\192.168.101.6\\d$\\Publish\\BSDN\\bvant\\ /s /e /y",
+    "build:doc-mac": "vant-cli build-site && cp -p -R ./site/ /Volumes/d$/Publish/BSDN/bvant ",
     "release": "vant-cli release",
     "test:watch": "vant-cli test --watch",
     "release:site": "sh docs/site/release.sh",
