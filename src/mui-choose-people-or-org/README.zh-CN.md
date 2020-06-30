@@ -2,7 +2,7 @@
 
 ### 介绍
 
-选人控件，默认当前单位选择
+选人控件，默认当前单位选择. [实例](https://github.com/xakoy/belvoly-vue-aioa-examples/blob/master/src/views/mobile/Upload.vue)
 
 ### 引入
 
