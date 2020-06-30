@@ -6,6 +6,13 @@
       :placeholder="t('textPlaceholder')"
     />
     <bvan-field
+      v-model="text"
+      is-link
+      :label="t('text')"
+      input-align="right"
+      :placeholder="t('textPlaceholder')"
+    />
+    <bvan-field
       v-model="phone"
       type="tel"
       :label="t('phone')"
