@@ -31,7 +31,7 @@ Vue.use(Button);
 
 
 ## 更新
-### 
+### v0.1.7
 1. 修改`nav-bar`的文字颜色
 2. 调整`cell` 和 `field`, 增加`form`属性
 
