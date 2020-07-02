@@ -6,6 +6,12 @@
       :placeholder="t('textPlaceholder')"
     />
     <bvan-field
+      form
+      v-model="text"
+      :label="t('text')"
+      :placeholder="t('textPlaceholder')"
+    />
+    <bvan-field
       v-model="text"
       is-link
       :label="t('text')"

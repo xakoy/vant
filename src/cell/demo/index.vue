@@ -2,8 +2,20 @@
   <demo-section>
     <demo-block :title="t('basicUsage')">
       <bvan-cell-group>
-        <bvan-cell :title="t('cell')" :value="t('content')" />
+        <bvan-cell form :title="t('cell')" :value="t('content')" />
         <bvan-cell
+          :title="t('cell')"
+          :value="t('content')"
+          :label="t('desc')"
+        />
+      </bvan-cell-group>
+    </demo-block>
+    <demo-block title="Form">
+      <bvan-cell-group>
+        <bvan-cell form :title="t('cell')" :value="t('content')" />
+        <bvan-cell form is-link :title="t('cell')" :value="t('content')" />
+        <bvan-cell
+          form
           :title="t('cell')"
           :value="t('content')"
           :label="t('desc')"

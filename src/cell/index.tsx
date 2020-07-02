@@ -34,7 +34,7 @@ function Cell(
   slots: CellSlots,
   ctx: RenderContext<CellProps>
 ) {
-  const { icon, size, title, label, value, isLink } = props;
+  const { icon, size, title, label, value, isLink, form } = props;
   const showTitle = slots.title || isDef(title);
 
   function Label() {
@@ -123,6 +123,10 @@ function Cell(
 
   if (size) {
     classes[size] = size;
+  }
+
+  if(form) {
+    classes['form'] = true
   }
 
   return (

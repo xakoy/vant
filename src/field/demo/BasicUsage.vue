@@ -3,6 +3,9 @@
     <bvan-cell-group>
       <bvan-field v-model="value" :placeholder="t('placeholder')" />
     </bvan-cell-group>
+    <bvan-cell-group>
+      <bvan-field form v-model="value" :placeholder="t('placeholder')" />
+    </bvan-cell-group>
   </demo-block>
 </template>
 

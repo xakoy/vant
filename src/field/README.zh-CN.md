@@ -243,6 +243,7 @@ export default {
 | maxlength | 输入的最大字符数 | *number \| string* | - |
 | placeholder | 占位提示文字 | *string* | - |
 | border | 是否显示内边框 | *boolean* | `true` |
+| form | 是否form格式 | *boolean* | `false` |
 | disabled | 是否禁用输入框 | *boolean* | `false` |
 | readonly | 是否只读 | *boolean* | `false` |
 | required | 是否显示表单必填星号 | *boolean* | `false` |

@@ -1,7 +1,7 @@
 @import '../style/var';
 @import '../style/mixins/hairline';
 
-.bvan-cell {
+.@{module}-cell {
   position: relative;
   display: flex;
   box-sizing: border-box;
@@ -92,12 +92,19 @@
     padding-top: @cell-large-vertical-padding;
     padding-bottom: @cell-large-vertical-padding;
 
-    .van-cell__title {
+    .@{module}-cell__title {
       font-size: @cell-large-title-font-size;
     }
 
-    .van-cell__label {
+    .@{module}-cell__label {
       font-size: @cell-large-label-font-size;
     }
+  }
+
+  &--form {
+    font-size: @cell-form-font-size;
+  }
+  &--form &__title {
+    color: @cell-form-title-text-color;
   }
 }

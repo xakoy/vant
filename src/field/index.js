@@ -539,6 +539,7 @@ export default createComponent({
         center={this.center}
         border={this.border}
         isLink={this.isLink}
+        form={this.form}
         required={this.required}
         clickable={this.clickable}
         titleStyle={this.labelStyle}

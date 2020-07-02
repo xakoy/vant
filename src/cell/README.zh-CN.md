@@ -18,8 +18,8 @@ Vue.use(CellGroup);
 
 ```html
 <van-cell-group>
-  <van-cell title="单元格" value="内容" />
-  <van-cell title="单元格" value="内容" label="描述信息" />
+  <bvan-cell title="单元格" value="内容" />
+  <bvan-cell title="单元格" value="内容" label="描述信息" />
 </van-cell-group>
 ```
 
@@ -28,8 +28,8 @@ Vue.use(CellGroup);
 通过`size`属性可以控制单元格的大小
 
 ```html
-<van-cell title="单元格" value="内容" size="large" />
-<van-cell title="单元格" value="内容" size="large" label="描述信息" />
+<bvan-cell title="单元格" value="内容" size="large" />
+<bvan-cell title="单元格" value="内容" size="large" label="描述信息" />
 ```
 
 ### 展示图标
@@ -37,7 +37,7 @@ Vue.use(CellGroup);
 通过`icon`属性在标题左侧展示图标
 
 ```html
-<van-cell title="单元格" icon="location-o" />
+<bvan-cell title="单元格" icon="location-o" />
 ```
 
 ### 只设置 value
@@ -45,7 +45,7 @@ Vue.use(CellGroup);
 只设置`value`时，内容会靠左对齐
 
 ```html
-<van-cell value="内容" />
+<bvan-cell value="内容" />
 ```
 
 ### 展示箭头
@@ -53,9 +53,15 @@ Vue.use(CellGroup);
 设置`is-link`属性后会在单元格右侧显示箭头，并且可以通过`arrow-direction`属性控制箭头方向
 
 ```html
-<van-cell title="单元格" is-link />
-<van-cell title="单元格" is-link value="内容" />
-<van-cell title="单元格" is-link arrow-direction="down" value="内容" />
+<bvan-cell title="单元格" is-link />
+<bvan-cell title="单元格" is-link value="内容" />
+<bvan-cell title="单元格" is-link arrow-direction="down" value="内容" />
+```
+
+### form格式
+设置`form`后，会有专门的格式显示，label颜色和内容颜色，大小和正常的不一样
+```html
+<bvan-cell title="单元格" form />
 ```
 
 ### 页面导航
@@ -63,8 +69,8 @@ Vue.use(CellGroup);
 可以通过`url`属性进行 URL 跳转，或通过`to`属性进行路由跳转
 
 ```html
-<van-cell title="URL 跳转" is-link url="/vant/mobile.html" />
-<van-cell title="路由跳转" is-link to="index" />
+<bvan-cell title="URL 跳转" is-link url="/vant/mobile.html" />
+<bvan-cell title="路由跳转" is-link to="index" />
 ```
 
 ### 分组标题
@@ -91,7 +97,7 @@ Vue.use(CellGroup);
 如以上用法不能满足你的需求，可以使用插槽来自定义内容
 
 ```html
-<van-cell value="内容" is-link>
+<bvan-cell value="内容" is-link>
   <!-- 使用 title 插槽来自定义标题 -->
   <template #title>
     <span class="custom-title">单元格</span>
@@ -99,7 +105,7 @@ Vue.use(CellGroup);
   </template>
 </van-cell>
 
-<van-cell title="单元格" icon="shop-o">
+<bvan-cell title="单元格" icon="shop-o">
   <!-- 使用 right-icon 插槽来自定义右侧图标 -->
   <template #right-icon>
     <van-icon
@@ -115,7 +121,7 @@ Vue.use(CellGroup);
 通过`center`属性可以让`Cell`的左右内容都垂直居中
 
 ```html
-<van-cell center title="单元格" value="内容" label="描述信息" />
+<bvan-cell center title="单元格" value="内容" label="描述信息" />
 ```
 
 
@@ -142,6 +148,7 @@ Vue.use(CellGroup);
 | url | 点击后跳转的链接地址 | *string* | - |
 | to | 点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to) | *string \| object* | - |
 | border | 是否显示内边框 | *boolean* | `true` |
+| form | 是否form格式 | *boolean* | `false` |
 | replace | 是否在跳转时替换当前页面历史 | *boolean* | `false` |
 | clickable | 是否开启点击反馈 | *boolean* | `false` |
 | is-link | 是否展示右侧箭头并开启点击反馈 | *boolean* | `false` |
