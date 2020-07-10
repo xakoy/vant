@@ -44,6 +44,10 @@ const PopupMenu = {
             visible: false
         }
     },
+    mounted() {
+        const that = this as any
+        that.visible = that.value
+    },
     watch: {
         value() {
             const that = this as any
