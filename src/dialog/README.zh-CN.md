@@ -108,9 +108,9 @@ export default {
 如果需要在弹窗内嵌入组件或其他自定义内容，可以使用组件调用的方式
 
 ```html
-<van-dialog v-model="show" title="标题" show-cancel-button>
+<bvan-dialog v-model="show" title="标题" show-cancel-button>
   <img src="https://img.yzcdn.cn/vant/apple-3.jpg">
-</van-dialog>
+</bvan-dialog>
 ```
 
 ```js
@@ -123,6 +123,23 @@ export default {
 }
 ```
 
+
+### 自定义按钮
+如果需要按钮自定义内容，可以使用组件调用的方式
+```html
+<bvan-dialog
+  v-model="show"
+  title="标题"
+  show-cancel-button
+>
+  <img :src="image" />
+  <template #buttons>
+    <bvan-button size="large" @click="slotShow = false">取消</bvan-button>
+    <bvan-button size="large" class="bvan-hairline--left" @click="slotShow = false">取消</bvan-button>
+    <bvan-button size="large" class="bvan-dialog__confirm bvan-hairline--left" @click="slotShow = false">确定</bvan-button>
+  </template>
+</bvan-dialog>
+```
 
 ## API
 
@@ -213,3 +230,4 @@ export default {
 |------|------|
 | default | 自定义内容 |
 | title | 自定义标题 |
+| buttons | 自定义按钮区 |

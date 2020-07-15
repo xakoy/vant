@@ -34,6 +34,7 @@ Vue.use(Button);
 ### v0.1.8
 1. `datetime-picker-field` 增加`form`属性
 2. `picker-field` 增加`form`属性
+3. `dialog` 增加`buttons`插槽
 
 ### v0.1.7
 1. 修改`nav-bar`的文字颜色

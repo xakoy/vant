@@ -94,10 +94,12 @@ export default createComponent({
 
     genButtons() {
       const multiple = this.showCancelButton && this.showConfirmButton;
+      const buttons = this.slots('buttons')
 
       return (
         <div class={[BORDER_TOP, bem('footer', { buttons: multiple })]}>
-          {this.showCancelButton && (
+          { buttons }
+          { !buttons && this.showCancelButton && (
             <Button
               size="large"
               class={bem('cancel')}
@@ -109,7 +111,7 @@ export default createComponent({
               }}
             />
           )}
-          {this.showConfirmButton && (
+          {!buttons && this.showConfirmButton && (
             <Button
               size="large"
               class={[bem('confirm'), { [BORDER_LEFT]: multiple }]}

@@ -34,6 +34,24 @@
         <img :src="image" />
       </bvan-dialog>
     </demo-block>
+
+    <demo-block title="Buttons slot">
+      <bvan-button type="primary" @click="slotShow = true">
+        Buttons 插槽
+      </bvan-button>
+      <bvan-dialog
+        v-model="slotShow"
+        :title="t('title')"
+        show-cancel-button
+      >
+        <img :src="image" />
+        <template #buttons>
+          <bvan-button size="large" @click="slotShow = false">取消</bvan-button>
+          <bvan-button size="large" class="bvan-hairline--left" @click="slotShow = false">取消</bvan-button>
+          <bvan-button size="large" class="bvan-dialog__confirm bvan-hairline--left" @click="slotShow = false">确定</bvan-button>
+        </template>
+      </bvan-dialog>
+    </demo-block>
   </demo-section>
 </template>
 
@@ -60,6 +78,7 @@ export default {
   data() {
     return {
       show: false,
+      slotShow: false,
       currentRate: 0,
       image: 'https://img.yzcdn.cn/vant/apple-3.jpg',
     };
