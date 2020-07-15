@@ -1,4 +1,5 @@
 import { createNamespace } from '../utils';
+import { cellProps } from '../cell/shared';
 
 import Field from '../field';
 import Popup from '../popup';
@@ -8,6 +9,7 @@ const [createComponent, bem] = createNamespace('picker-field');
 
 const s = {
   props: {
+    ...cellProps,
     value: {},
     rules: Array,
     label: {
@@ -125,6 +127,7 @@ const s = {
 
     const fieldProps = {
       props: {
+        form: this.form,
         clickable: false,
         label: this.label,
         required: this.required,

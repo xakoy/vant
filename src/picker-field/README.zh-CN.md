@@ -67,6 +67,7 @@ export default {
 | text-key | 选项对象中，选项值对应的键名 | *string* | `value` |
 | name `v2.5.0` | 名称，提交表单的标识符 | *string* | - |
 | placeholder | 占位提示文字 | *string* | - |
+| form | 是否form格式 | *boolean* | `false` |
 | border | 是否显示内边框 | *boolean* | `true` |
 | required | 是否显示表单必填星号 | *boolean* | `false` |
 | error | 是否将输入内容标红 | *boolean* | `false` |

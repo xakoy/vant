@@ -7,6 +7,9 @@
     <demo-block title="数字值">
       <bvan-picker-field v-model="num" label="类型" show-toolbar :columns="singleNums"/>
     </demo-block>
+    <demo-block title="form模式">
+      <bvan-picker-field form v-model="num" label="类型" show-toolbar :columns="singleNums"/>
+    </demo-block>
   </demo-section>
 </template>
 

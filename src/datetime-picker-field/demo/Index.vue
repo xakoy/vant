@@ -19,6 +19,9 @@
     <demo-block title="year-month">
       <bvan-datetime-picker-field label="开始月份" required input-align="right" type="year-month" value-format="YYYY-MM" :defaut-now="true" />
     </demo-block>
+    <demo-block title="form模式">
+      <bvan-datetime-picker-field form label="开始月份" required input-align="right" type="year-month" value-format="YYYY-MM" :defaut-now="true" />
+    </demo-block>
   </demo-section>
 </template>
 

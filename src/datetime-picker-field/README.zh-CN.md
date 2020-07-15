@@ -37,6 +37,7 @@ export default {
 | label | 输入框左侧文本 | *string* | - |
 | type | 类型，可选值为 `date` <br> `time` `year-month` | *string* | `datetime` |
 | name `v2.5.0` | 名称，提交表单的标识符 | *string* | - |
+| form | 是否form格式 | *boolean* | `false` |
 | placeholder | 占位提示文字 | *string* | - |
 | border | 是否显示内边框 | *boolean* | `true` |
 | required | 是否显示表单必填星号 | *boolean* | `false` |
