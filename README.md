@@ -31,6 +31,9 @@ Vue.use(Button);
 
 
 ## 更新
+### NEW
+1. `tab`增加 `card-center`模式下也可以设置`border`
+
 ### v0.1.8
 1. `datetime-picker-field` 增加`form`属性
 2. `picker-field` 增加`form`属性

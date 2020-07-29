@@ -206,7 +206,7 @@ export default {
 | line-width | 底部条宽度，默认单位`px` | *number \| string* | `auto` |
 | line-height | 底部条高度，默认单位`px` | *number \| string* | `3px` |
 | animated | 是否开启切换标签内容时的转场动画 | *boolean* | `false` |
-| border | 是否显示标签栏外边框，仅在`type="line"`时有效 | *boolean* | `true` |
+| border | 是否显示标签栏外边框，仅在`type="line"` 或 `card-center=true `时有效 | *boolean* | `true` |
 | ellipsis | 是否省略过长的标题文字 | *boolean* | `true` |
 | sticky | 是否使用粘性定位布局 | *boolean* | `false` |
 | swipeable | 是否开启手势滑动切换 | *boolean* | `false` |

@@ -43,10 +43,22 @@
           {{ t('content') }} {{ index }}
         </bvan-tab>
       </bvan-tabs>
-
-      <bvan-tabs type="card" :card-center="true">
+    </demo-block>
+    <demo-block title="card-center">
+       <bvan-tabs type="card" :card-center="true">
         <bvan-tab v-for="index in 3" :title="t('tab') + index" :key="index">
           {{ t('content') }} {{ index }}
+        </bvan-tab>
+        <template v-slot:top-left>
+          <div>left</div>
+        </template>
+      </bvan-tabs>
+    </demo-block>
+
+    <demo-block title="card-center">
+       <bvan-tabs type="card" :card-center="true" :border="false">
+        <bvan-tab v-for="index in 3" :title="t('tab') + index" :key="index">
+          标题移除border {{ index }}
         </bvan-tab>
         <template v-slot:top-left>
           <div>left</div>

@@ -376,7 +376,7 @@ export default createComponent({
         class={[
           bem('wrap', { scrollable }),
           { [BORDER_TOP_BOTTOM]: type === 'line' && this.border },
-          { [BORDER_BOTTOM]: cardCenter },
+          { [BORDER_BOTTOM]: cardCenter && this.border },
         ]}
       >
         {this.slots('top-left') ? <div class={bem('top', 'left')}>{this.slots('top-left')}</div> : null}
