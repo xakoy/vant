@@ -31,7 +31,7 @@ Vue.use(Button);
 
 
 ## 更新
-### NEW
+### v0.1.9
 1. `tab`增加 `card-center`模式下也可以设置`border`
 
 ### v0.1.8
