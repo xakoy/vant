@@ -135,7 +135,7 @@ export default createComponent({
         const text = this.slots('finished') || this.finishedText;
 
         if (text) {
-          return <div class={bem('finished-text')}>{text}</div>;
+          return <div class={bem('finished-text')}><span>{text}</span></div>;
         }
       }
     },

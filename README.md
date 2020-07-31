@@ -31,6 +31,9 @@ Vue.use(Button);
 
 
 ## 更新
+### v0.1.10
+1. `list` finished状态的文字增加两边横线
+
 ### v0.1.9
 1. `tab`增加 `card-center`模式下也可以设置`border`
 

@@ -10,6 +10,26 @@
     text-align: center;
   }
 
+  &__finished-text {
+    display: flex;
+    padding: 0 16px;
+    span {
+      flex: 1;
+      display: block;
+      white-space: nowrap;
+      padding: 0 10px;
+    }
+    &:before,
+    &:after {
+      content: "";
+      border-top: 1px #E4E4E4 solid; 
+      vertical-align: middle;
+      width: 300px;
+      flex-shrink: 1;
+      margin-top: @list-text-line-height/2 - 1px;
+    }  
+  }
+
   &__placeholder {
     height: 0;
     pointer-events: none;
