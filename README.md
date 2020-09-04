@@ -31,6 +31,9 @@ Vue.use(Button);
 
 
 ## 更新
+### v0.1.11
+1. 更新`field`组件同步vant的2.9代码
+
 ### v0.1.10
 1. `list` finished状态的文字增加两边横线
 
