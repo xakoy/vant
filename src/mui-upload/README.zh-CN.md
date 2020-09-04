@@ -133,6 +133,20 @@ export default class UploadIndex extends Vue {
 <upload  :fileList="fileList"  readonly />
 ```
 
+### 简易模式
+
+简易模式，适用于自定义上传内容，返回结果都自己处理
+
+```html
+<bvan-cell-group title="简易模式">
+    <upload simple @success="simpleSuccessHandler" action="http://192.168.101.135:2001/api/bua/avatar/uploadHeadPhoto?userUid=luolong">
+        <template #simple>
+            上传中
+        </template>
+    </upload>
+</bvan-cell-group>
+```
+
 ## API
 
 ### Props
@@ -147,10 +161,12 @@ export default class UploadIndex extends Vue {
 | refTableName | 共享附件接口`refTableName`参数 | *string* | - |
 | typeCode | 共享附件接口`typeCode`参数 | *string* | - |
 | userUid | 当前用户的`userUid` | *string* | - |
+| tip | 提示文字 | *string* | - |
 | maxSize | 最多只能上传多少MB内容 | *number* | `50` |
 | limit | 最多可以上传多少个文件 | *number* | `9999` |
 | isOnlyImage | 是否只允许图片 | *boolean* | `false` |
 | readonly | 是否只读模式 | *boolean* | `false` |
+| simple | 是否简易模式 | *boolean* | `false` |
 | beforeUpload | 上传前验证，Promise 异常，则取消上传 | *Promise<void>* | - |
 
 
@@ -165,10 +181,20 @@ export default class UploadIndex extends Vue {
 
 | 事件名 | 说明 | 回调参数 |
 |------|------|------|
+| success | 上传成功后触发 | *info*, *responseData* |
 | change | 上传完成后触发 | *files[]* |
+| error | 上传失败后触发| - |
+| uploading | 上传中后触发| - |
 
 ### Methods
 
 | 方法名 | 说明 | 回调参数 |
 |------|------|------|
 | updateRelevance| 更新关联业务表记录ID | refTableID: *string* |
+
+### Slots
+
+| 名称 | 说明 | 参数
+|------|------|------|
+| buttons | 按钮区自定义内容 | item: { status: '文件状态', file: '文件内容'} |
+| simple | 简易模式的上传自定义内容 | - |
