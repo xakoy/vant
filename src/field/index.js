@@ -1,14 +1,14 @@
 // Utils
-import { formatNumber } from './utils';
-import { preventDefault } from '../utils/dom/event';
 import { resetScroll } from '../utils/dom/reset-scroll';
+import { formatNumber } from '../utils/format/number';
+import { preventDefault } from '../utils/dom/event';
 import {
-  createNamespace,
-  isObject,
   isDef,
   addUnit,
+  isObject,
   isPromise,
   isFunction,
+  createNamespace,
 } from '../utils';
 
 // Components
@@ -37,7 +37,6 @@ export default createComponent({
     ...cellProps,
     name: String,
     rules: Array,
-    error: Boolean,
     disabled: Boolean,
     readonly: Boolean,
     autosize: [Boolean, Object],
@@ -54,21 +53,43 @@ export default createComponent({
     errorMessage: String,
     errorMessageAlign: String,
     showWordLimit: Boolean,
+    value: {
+      type: [String, Number],
+      default: '',
+    },
     type: {
       type: String,
       default: 'text',
+    },
+    error: {
+      type: Boolean,
+      default: null,
+    },
+    colon: {
+      type: Boolean,
+      default: null,
+    },
+    clearTrigger: {
+      type: String,
+      default: 'focus',
+    },
+    formatTrigger: {
+      type: String,
+      default: 'onChange',
     },
   },
 
   data() {
     return {
       focused: false,
+      validateFailed: false,
       validateMessage: '',
     };
   },
 
   watch: {
     value() {
+      this.updateValue(this.value);
       this.resetValidation();
       this.validateWithTrigger('onChange');
       this.$nextTick(this.adjustSize);
@@ -76,7 +97,7 @@ export default createComponent({
   },
 
   mounted() {
-    this.format();
+    this.updateValue(this.value, this.formatTrigger);
     this.$nextTick(this.adjustSize);
 
     if (this.vanForm) {
@@ -92,34 +113,34 @@ export default createComponent({
 
   computed: {
     showClear() {
-      return (
-        this.clearable &&
-        this.focused &&
-        this.value !== '' &&
-        isDef(this.value) &&
-        !this.readonly
-      );
+      if (this.clearable && !this.readonly) {
+        const hasValue = isDef(this.value) && this.value !== '';
+        const trigger =
+          this.clearTrigger === 'always' ||
+          (this.clearTrigger === 'focus' && this.focused);
+
+        return hasValue && trigger;
+      }
     },
 
     showError() {
-      if (this.vanForm && this.vanForm.showError && this.validateMessage) {
+      if (this.error !== null) {
+        return this.error;
+      }
+      if (this.vanForm && this.vanForm.showError && this.validateFailed) {
         return true;
       }
-      return this.error;
     },
 
     listeners() {
-      const listeners = {
+      return {
         ...this.$listeners,
-        input: this.onInput,
-        keypress: this.onKeypress,
-        focus: this.onFocus,
         blur: this.onBlur,
+        focus: this.onFocus,
+        input: this.onInput,
+        click: this.onClickInput,
+        keypress: this.onKeypress,
       };
-
-      delete listeners.click;
-
-      return listeners;
     },
 
     labelStyle() {
@@ -197,7 +218,7 @@ export default createComponent({
       return rules.reduce(
         (promise, rule) =>
           promise.then(() => {
-            if (this.validateMessage) {
+            if (this.validateFailed) {
               return;
             }
 
@@ -208,6 +229,7 @@ export default createComponent({
             }
 
             if (!this.runSyncRule(value, rule)) {
+              this.validateFailed = true;
               this.validateMessage = this.getRuleMessage(value, rule);
               return;
             }
@@ -215,6 +237,7 @@ export default createComponent({
             if (rule.validator) {
               return this.runValidator(value, rule).then((result) => {
                 if (result === false) {
+                  this.validateFailed = true;
                   this.validateMessage = this.getRuleMessage(value, rule);
                 }
               });
@@ -231,7 +254,7 @@ export default createComponent({
         }
 
         this.runRules(rules).then(() => {
-          if (this.validateMessage) {
+          if (this.validateFailed) {
             resolve({
               name: this.name,
               message: this.validateMessage,
@@ -260,46 +283,39 @@ export default createComponent({
 
     resetValidation() {
       if (this.validateMessage) {
+        this.validateFailed = false;
         this.validateMessage = '';
       }
     },
 
-    format(target = this.$refs.input) {
-      if (!target) {
-        return;
-      }
-
-      let { value } = target;
-      const { maxlength } = this;
+    updateValue(value, trigger = 'onChange') {
+      value = isDef(value) ? String(value) : '';
 
       // native maxlength not work when type is number
+      const { maxlength } = this;
       if (isDef(maxlength) && value.length > maxlength) {
         value = value.slice(0, maxlength);
-        target.value = value;
       }
 
       if (this.type === 'number' || this.type === 'digit') {
-        const originValue = value;
         const allowDot = this.type === 'number';
-
         value = formatNumber(value, allowDot);
-
-        if (value !== originValue) {
-          target.value = value;
-        }
       }
 
-      if (this.formatter) {
-        const originValue = value;
-
+      if (this.formatter && trigger === this.formatTrigger) {
         value = this.formatter(value);
-
-        if (value !== originValue) {
-          target.value = value;
-        }
       }
 
-      return value;
+      const { input } = this.$refs;
+      if (input && value !== input.value) {
+        input.value = value;
+      }
+
+      if (value !== this.value) {
+        this.$emit('input', value);
+      }
+
+      this.currentValue = value;
     },
 
     onInput(event) {
@@ -308,7 +324,7 @@ export default createComponent({
         return;
       }
 
-      this.$emit('input', this.format(event.target));
+      this.updateValue(event.target.value);
     },
 
     onFocus(event) {
@@ -324,6 +340,7 @@ export default createComponent({
 
     onBlur(event) {
       this.focused = false;
+      this.updateValue(this.value, 'onBlur');
       this.$emit('blur', event);
       this.validateWithTrigger('onBlur');
       resetScroll();
@@ -331,6 +348,10 @@ export default createComponent({
 
     onClick(event) {
       this.$emit('click', event);
+    },
+
+    onClickInput(event) {
+      this.$emit('click-input', event);
     },
 
     onClickLeftIcon(event) {
@@ -348,10 +369,18 @@ export default createComponent({
     },
 
     onKeypress(event) {
-      // trigger blur after click keyboard search button
-      /* istanbul ignore next */
-      if (this.type === 'search' && event.keyCode === 13) {
-        this.blur();
+      const ENTER_CODE = 13;
+
+      if (event.keyCode === ENTER_CODE) {
+        const submitOnEnter = this.getProp('submitOnEnter');
+        if (!submitOnEnter && this.type !== 'textarea') {
+          preventDefault(event);
+        }
+
+        // trigger blur after click keyboard search button
+        if (this.type === 'search') {
+          this.blur();
+        }
       }
 
       this.$emit('keypress', event);
@@ -388,7 +417,12 @@ export default createComponent({
 
       if (inputSlot) {
         return (
-          <div class={bem('control', [inputAlign, 'custom'])}>{inputSlot}</div>
+          <div
+            class={bem('control', [inputAlign, 'custom'])}
+            onClick={this.onClickInput}
+          >
+            {inputSlot}
+          </div>
         );
       }
 
@@ -468,13 +502,11 @@ export default createComponent({
 
     genWordLimit() {
       if (this.showWordLimit && this.maxlength) {
-        const count = this.value.length;
-        const full = count >= this.maxlength;
+        const count = (this.value || '').length;
 
         return (
           <div class={bem('word-limit')}>
-            <span class={bem('word-num', { full })}>{count}</span>/
-            {this.maxlength}
+            <span class={bem('word-num')}>{count}</span>/{this.maxlength}
           </div>
         );
       }
@@ -532,6 +564,11 @@ export default createComponent({
       scopedSlots.title = () => Label;
     }
 
+    const extra = this.slots('extra');
+    if (extra) {
+      scopedSlots.extra = () => extra;
+    }
+
     return (
       <Cell
         icon={this.leftIcon}
@@ -549,13 +586,13 @@ export default createComponent({
         arrowDirection={this.arrowDirection}
         class={bem({
           error: this.showError,
+          disabled: this.disabled,
           [`label-${labelAlign}`]: labelAlign,
           'min-height': this.type === 'textarea' && !this.autosize,
         })}
         onClick={this.onClick}
       >
         <div class={bem('body')}>
-          {slots('default')}
           {this.genInput()}
           {this.showClear && (
             <Icon
