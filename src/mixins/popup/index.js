@@ -1,6 +1,11 @@
 // Context
 import { context } from './context';
-import { openOverlay, closeOverlay, updateOverlay } from './overlay';
+import {
+  openOverlay,
+  closeOverlay,
+  updateOverlay,
+  removeOverlay,
+} from './overlay';
 
 // Utils
 import { on, off, preventDefault } from '../../utils/dom/event';
@@ -13,6 +18,8 @@ import { PortalMixin } from '../portal';
 import { CloseOnPopstateMixin } from '../close-on-popstate';
 
 export const popupMixinProps = {
+  // Initial rendering animation
+  transitionAppear: Boolean,
   // whether to show popup
   value: Boolean,
   // whether to show overlay
@@ -21,7 +28,7 @@ export const popupMixinProps = {
   overlayStyle: Object,
   // overlay custom class name
   overlayClass: String,
-  // whether to close popup when click overlay
+  // whether to close popup when overlay is clicked
   closeOnClickOverlay: Boolean,
   // z-index
   zIndex: [Number, String],
@@ -94,7 +101,11 @@ export function PopupMixin(options = {}) {
     },
 
     beforeDestroy() {
-      this.close();
+      removeOverlay(this);
+
+      if (this.opened) {
+        this.removeLock();
+      }
 
       if (this.getContainer) {
         removeNode(this.$el);
@@ -123,15 +134,30 @@ export function PopupMixin(options = {}) {
 
         this.opened = true;
         this.renderOverlay();
+        this.addLock();
+      },
 
+      addLock() {
         if (this.lockScroll) {
           on(document, 'touchstart', this.touchStart);
           on(document, 'touchmove', this.onTouchMove);
 
           if (!context.lockCount) {
-            document.body.classList.add('van-overflow-hidden');
+            document.body.classList.add('bvan-overflow-hidden');
           }
           context.lockCount++;
+        }
+      },
+
+      removeLock() {
+        if (this.lockScroll && context.lockCount) {
+          context.lockCount--;
+          off(document, 'touchstart', this.touchStart);
+          off(document, 'touchmove', this.onTouchMove);
+
+          if (!context.lockCount) {
+            document.body.classList.remove('bvan-overflow-hidden');
+          }
         }
       },
 
@@ -140,18 +166,9 @@ export function PopupMixin(options = {}) {
           return;
         }
 
-        if (this.lockScroll) {
-          context.lockCount--;
-          off(document, 'touchstart', this.touchStart);
-          off(document, 'touchmove', this.onTouchMove);
-
-          if (!context.lockCount) {
-            document.body.classList.remove('van-overflow-hidden');
-          }
-        }
-
-        this.opened = false;
         closeOverlay(this);
+        this.opened = false;
+        this.removeLock();
         this.$emit('input', false);
       },
 

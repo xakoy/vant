@@ -371,7 +371,7 @@ export default createComponent({
     }
 
     return (
-      <transition name="van-fade" onAfterLeave={this.onClosed}>
+      <transition name="bvan-fade" onAfterLeave={this.onClosed}>
         <div vShow={this.value} class={[bem(), this.className]}>
           {this.genClose()}
           {this.genImages()}

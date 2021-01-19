@@ -1,6 +1,6 @@
 @import '../style/var';
 
-.van-address-list {
+.@{module}-address-list {
   box-sizing: border-box;
   height: 100%;
   padding: @address-list-padding;
@@ -29,7 +29,7 @@
   }
 }
 
-.van-address-item {
+.@{module}-address-item {
   padding: @address-list-item-padding;
   background-color: @white;
   border-radius: @border-radius-lg;
@@ -65,8 +65,8 @@
   }
 
   &--disabled {
-    .van-address-item__name,
-    .van-address-item__address {
+    .@{module}-address-item__name,
+    .@{module}-address-item__address {
       color: @address-list-item-disabled-text-color;
     }
   }
@@ -80,15 +80,15 @@
     transform: translate(0, -50%);
   }
 
-  .van-cell {
+  .@{module}-cell {
     padding: 0;
   }
 
-  .van-radio__label {
+  .@{module}-radio__label {
     margin-left: @padding-sm;
   }
 
-  .van-radio__icon--checked .van-icon {
+  .@{module}-radio__icon--checked .@{module}-icon {
     background-color: @address-list-item-radio-icon-color;
     border-color: @address-list-item-radio-icon-color;
   }

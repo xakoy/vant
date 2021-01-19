@@ -62,7 +62,7 @@ export default createComponent({
   },
 
   beforeCreate() {
-    this.uid = `van-circle-gradient-${uid++}`;
+    this.uid = `bvan-circle-gradient-${uid++}`;
   },
 
   computed: {
