@@ -1,54 +1,54 @@
 @import './var';
 
-@keyframes van-slide-up-enter {
+@keyframes bvan-slide-up-enter {
   from {
     transform: translate3d(0, 100%, 0);
   }
 }
 
-@keyframes van-slide-up-leave {
+@keyframes bvan-slide-up-leave {
   to {
     transform: translate3d(0, 100%, 0);
   }
 }
 
-@keyframes van-slide-down-enter {
+@keyframes bvan-slide-down-enter {
   from {
     transform: translate3d(0, -100%, 0);
   }
 }
 
-@keyframes van-slide-down-leave {
+@keyframes bvan-slide-down-leave {
   to {
     transform: translate3d(0, -100%, 0);
   }
 }
 
-@keyframes van-slide-left-enter {
+@keyframes bvan-slide-left-enter {
   from {
     transform: translate3d(-100%, 0, 0);
   }
 }
 
-@keyframes van-slide-left-leave {
+@keyframes bvan-slide-left-leave {
   to {
     transform: translate3d(-100%, 0, 0);
   }
 }
 
-@keyframes van-slide-right-enter {
+@keyframes bvan-slide-right-enter {
   from {
     transform: translate3d(100%, 0, 0);
   }
 }
 
-@keyframes van-slide-right-leave {
+@keyframes bvan-slide-right-leave {
   to {
     transform: translate3d(100%, 0, 0);
   }
 }
 
-@keyframes van-fade-in {
+@keyframes bvan-fade-in {
   from {
     opacity: 0;
   }
@@ -58,7 +58,7 @@
   }
 }
 
-@keyframes van-fade-out {
+@keyframes bvan-fade-out {
   from {
     opacity: 1;
   }
@@ -68,7 +68,7 @@
   }
 }
 
-@keyframes van-rotate {
+@keyframes bvan-rotate {
   from {
     transform: rotate(0deg);
   }
@@ -80,60 +80,60 @@
 
 .@{module}-fade {
   &-enter-active {
-    animation: @animation-duration-base van-fade-in both
+    animation: @animation-duration-base bvan-fade-in both
       @animation-timing-function-enter;
   }
 
   &-leave-active {
-    animation: @animation-duration-base van-fade-out both
+    animation: @animation-duration-base bvan-fade-out both
       @animation-timing-function-leave;
   }
 }
 
 .@{module}-slide-up {
   &-enter-active {
-    animation: van-slide-up-enter @animation-duration-base both
+    animation: bvan-slide-up-enter @animation-duration-base both
       @animation-timing-function-enter;
   }
 
   &-leave-active {
-    animation: van-slide-up-leave @animation-duration-base both
+    animation: bvan-slide-up-leave @animation-duration-base both
       @animation-timing-function-leave;
   }
 }
 
 .@{module}-slide-down {
   &-enter-active {
-    animation: van-slide-down-enter @animation-duration-base both
+    animation: bvan-slide-down-enter @animation-duration-base both
       @animation-timing-function-enter;
   }
 
   &-leave-active {
-    animation: van-slide-down-leave @animation-duration-base both
+    animation: bvan-slide-down-leave @animation-duration-base both
       @animation-timing-function-leave;
   }
 }
 
 .@{module}-slide-left {
   &-enter-active {
-    animation: van-slide-left-enter @animation-duration-base both
+    animation: bvan-slide-left-enter @animation-duration-base both
       @animation-timing-function-enter;
   }
 
   &-leave-active {
-    animation: van-slide-left-leave @animation-duration-base both
+    animation: bvan-slide-left-leave @animation-duration-base both
       @animation-timing-function-leave;
   }
 }
 
 .@{module}-slide-right {
   &-enter-active {
-    animation: van-slide-right-enter @animation-duration-base both
+    animation: bvan-slide-right-enter @animation-duration-base both
       @animation-timing-function-enter;
   }
 
   &-leave-active {
-    animation: van-slide-right-leave @animation-duration-base both
+    animation: bvan-slide-right-leave @animation-duration-base both
       @animation-timing-function-leave;
   }
 }

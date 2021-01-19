@@ -25,7 +25,7 @@ import DocContainer from './Container';
 import DocSimulator from './Simulator';
 
 export default {
-  name: 'van-doc',
+  name: 'bvan-doc',
 
   components: {
     DocNav,
