@@ -31,8 +31,10 @@ Vue.use(Button);
 
 
 ## 更新
-###
+### v0.1.13
 1. 增加`popover`组件，设置`popmenu`组件过期
+2. 更新`dialog`组件为vant的2.12.2版本
+3. 修复`dialog`,`popup`动画效果无效
 ### v0.1.12
 1. 修复`field`同步2.9代码后，导致的`picker-field`, `datetime-picker-field`组件无效
 
