@@ -48,6 +48,7 @@
   "dependencies": {
     "@babel/runtime": "7.x",
     "@belvoly-vue-aioa/bvant-icons": "^1.2.2",
+    "@vant/popperjs": "^1.0.2",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "vue-lazyload": "1.2.3"
   },

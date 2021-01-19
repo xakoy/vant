@@ -233,6 +233,10 @@ module.exports = {
                 title: 'NoticeBar 通知栏',
               },
               {
+                path: 'popover',
+                title: 'Popover 气泡弹出框',
+              },
+              {
                 path: 'panel',
                 title: 'Panel 面板',
               },
@@ -595,6 +599,10 @@ module.exports = {
               {
                 path: 'notice-bar',
                 title: 'NoticeBar',
+              },
+              {
+                path: 'popover',
+                title: 'Popover',
               },
               {
                 path: 'panel',

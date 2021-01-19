@@ -31,6 +31,8 @@ Vue.use(Button);
 
 
 ## 更新
+###
+1. 增加`popover`组件，设置`popmenu`组件过期
 ### v0.1.12
 1. 修复`field`同步2.9代码后，导致的`picker-field`, `datetime-picker-field`组件无效
 
