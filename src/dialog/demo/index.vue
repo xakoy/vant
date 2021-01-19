@@ -1,30 +1,20 @@
 <template>
   <demo-section>
-    <demo-block :title="t('alert1')">
-      <bvan-button type="primary" @click="onClickAlert">
-        {{ t('alert1') }}
-      </bvan-button>
-      <bvan-button type="primary" @click="onClickAlert2">
-        {{ t('alert2') }}
-      </bvan-button>
+    <demo-block card :title="t('basicUsage')">
+      <bvan-cell is-link :title="t('alert1')" @click="onClickAlert" />
+      <bvan-cell is-link :title="t('alert2')" @click="onClickAlert2" />
+      <bvan-cell is-link :title="t('confirm')" @click="onClickConfirm" />
+    </demo-block>
+    <demo-block card :title="t('roundButton')">
+      <bvan-cell is-link :title="t('alert1')" @click="onClickRound" />
+      <bvan-cell is-link :title="t('alert2')" @click="onClickRound2" />
+    </demo-block>
+    <demo-block card :title="t('asyncClose')">
+      <bvan-cell is-link :title="t('asyncClose')" @click="onClickAsyncClose" />
     </demo-block>
 
-    <demo-block :title="t('confirm')">
-      <bvan-button type="primary" @click="onClickConfirm">
-        {{ t('confirm') }}
-      </bvan-button>
-    </demo-block>
-
-    <demo-block :title="t('asyncClose')">
-      <bvan-button type="primary" @click="onClickAsyncClose">
-        {{ t('asyncClose') }}
-      </bvan-button>
-    </demo-block>
-
-    <demo-block :title="t('componentCall')">
-      <bvan-button type="primary" @click="show = true">
-        {{ t('componentCall') }}
-      </bvan-button>
+    <demo-block card :title="t('componentCall')">
+      <bvan-cell is-link :title="t('componentCall')" @click="show = true" />
       <bvan-dialog
         v-model="show"
         :title="t('title')"
@@ -36,9 +26,7 @@
     </demo-block>
 
     <demo-block title="Buttons slot">
-      <bvan-button type="primary" @click="slotShow = true">
-        Buttons 插槽
-      </bvan-button>
+      <bvan-cell is-link title="Buttons 插槽" @click="slotShow = true" />
       <bvan-dialog
         v-model="slotShow"
         :title="t('title')"
@@ -63,6 +51,7 @@ export default {
       alert2: '提示弹窗（无标题）',
       confirm: '确认弹窗',
       asyncClose: '异步关闭',
+      roundButton: '圆角按钮样式',
       componentCall: '组件调用',
       content: '代码是写出来给人看的，附带能在机器上运行',
     },
@@ -71,6 +60,7 @@ export default {
       alert2: 'Alert without title',
       confirm: 'Confirm dialog',
       asyncClose: 'Async Close',
+      roundButton: 'Round Button Style',
       componentCall: 'Component Call',
     },
   },
@@ -94,6 +84,20 @@ export default {
 
     onClickAlert2() {
       this.$dialog.alert({
+        message: this.t('content'),
+      });
+    },
+    onClickRound() {
+      this.$dialog.alert({
+        theme: 'round-button',
+        title: this.t('title'),
+        message: this.t('content'),
+      });
+    },
+
+    onClickRound2() {
+      this.$dialog.alert({
+        theme: 'round-button',
         message: this.t('content'),
       });
     },
@@ -128,12 +132,6 @@ export default {
 @import '../../style/var';
 
 .demo-dialog {
-  background-color: @white;
-
-  .van-doc-demo-block > .@{module}-button {
-    margin-left: @padding-md;
-  }
-
   img {
     box-sizing: border-box;
     width: 100%;

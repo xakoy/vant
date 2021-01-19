@@ -29,9 +29,18 @@
     }
   }
 
+  &__content {
+    &--isolated {
+      display: flex;
+      align-items: center;
+      min-height: 104px;
+    }
+  }
+
   &__message {
+    flex: 1;
     max-height: @dialog-message-max-height;
-    padding: @dialog-message-padding;
+    padding: 26px @dialog-message-padding;
     overflow-y: auto;
     font-size: @dialog-message-font-size;
     line-height: @dialog-message-line-height;
@@ -57,8 +66,11 @@
   }
 
   &__footer {
+    display: flex;
     overflow: hidden;
     user-select: none;
+
+    
 
     &--buttons {
       display: flex;
@@ -72,11 +84,41 @@
   .@{module}-button {
     border: 0;
   }
+  
+  &__confirm,
+  &__cancel {
+    flex: 1;
+    height: @dialog-button-height;
+    margin: 0;
+    border: 0;
+  }
 
   &__confirm {
     &,
     &:active {
       color: @dialog-confirm-button-text-color;
+    }
+  }
+
+  &--round-button {
+    .@{module}-dialog__footer {
+      position: relative;
+      height: auto;
+      padding: @padding-xs @padding-lg @padding-md;
+    }
+
+    .@{module}-dialog__message {
+      padding-bottom: @padding-md;
+      color: @text-color;
+    }
+
+    .@{module}-dialog__confirm,
+    .@{module}-dialog__cancel {
+      height: @dialog-round-button-height;
+    }
+
+    .@{module}-dialog__confirm {
+      color: @white;
     }
   }
 
