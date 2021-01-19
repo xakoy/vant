@@ -121,7 +121,7 @@ export default createComponent({
     genLoading() {
       if (this.innerLoading && !this.finished) {
         return (
-          <div class={bem('loading')} key="loading">
+          <div key="loading" class={bem('loading')}>
             {this.slots('loading') || (
               <Loading size="16">{this.loadingText || t('loading')}</Loading>
             )}
@@ -156,8 +156,10 @@ export default createComponent({
   },
 
   render() {
-    const Placeholder = <div ref="placeholder" class={bem('placeholder')} />;
-
+    const Placeholder = (
+      <div ref="placeholder" key="placeholder" class={bem('placeholder')} />
+    );
+    
     return (
       <div class={bem()} role="feed" aria-busy={this.innerLoading}>
         {this.direction === 'down' ? this.slots() : Placeholder}
