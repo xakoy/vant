@@ -31,6 +31,12 @@ Vue.use(Button);
 
 
 ## 更新
+### v0.1.14
+1. `Switch` 组件关闭时按钮显示灰色
+2. `ButtonGroup` 边框样式优化，不会出现2px的边框
+3. 修复`list` 组件 finished-text的样式不正确两边线的margin-top失效了
+
+
 ### v0.1.13
 1. 增加`popover`组件，设置`popmenu`组件过期
 2. 更新`dialog`组件为vant的2.12.2版本
