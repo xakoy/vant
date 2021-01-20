@@ -86,6 +86,19 @@
         />
       </bvan-button-group>
     </demo-block>
+
+    <demo-block title="组">
+      <bvan-button-group>
+        <bvan-button square block :text="t('pure')" />
+        <bvan-button square block :text="t('pure')" />
+        <bvan-button
+          square
+          block
+          type="info"
+          :text="t('gradient')"
+        />
+      </bvan-button-group>
+    </demo-block>
   </demo-section>
 </template>
 
