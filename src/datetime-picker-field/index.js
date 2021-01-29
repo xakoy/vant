@@ -34,6 +34,10 @@ const s = {
       type: Boolean,
       default: true,
     },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
     labelWidth: [Number, String],
     labelClass: null,
     name: String,
@@ -171,6 +175,9 @@ const s = {
       },
       on: {
         click: () => {
+          if(this.readonly) {
+            return
+          }
           this.popupVisible = true;
         },
       },
@@ -181,7 +188,7 @@ const s = {
 
 
     return (
-      <Field is-link={true} readonly={true} {...fieldProps}>
+      <Field is-link={!this.readonly} readonly={true} {...fieldProps}>
         <Popup {...popupProps} get-container="body">
             <DatetimePicker {...datetimePickerProps} />
         </Popup>
