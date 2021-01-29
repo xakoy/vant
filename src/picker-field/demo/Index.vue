@@ -13,6 +13,9 @@
     <demo-block title="只读模式">
        <bvan-picker-field v-model="c" label="城市" readonly show-toolbar :columns="singleColumns" @change="onChange1" />
     </demo-block>
+    <demo-block title="禁用模式">
+       <bvan-picker-field v-model="c" label="城市" disabled show-toolbar :columns="singleColumns" @change="onChange1" />
+    </demo-block>
   </demo-section>
 </template>
 

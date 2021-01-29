@@ -71,6 +71,7 @@ export default {
 | border | 是否显示内边框 | *boolean* | `true` |
 | required | 是否显示表单必填星号 | *boolean* | `false` |
 | readonly | 是否只读 | *boolean* | `false` |
+| disabled | 是否禁用 | *boolean* | `false` |
 | error | 是否将输入内容标红 | *boolean* | `false` |
 | error-message | 底部错误提示文案，为空时不展示 | *string* | - |
 | label-class | 左侧文本额外类名 | *any* | - |
