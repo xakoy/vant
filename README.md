@@ -31,6 +31,8 @@ Vue.use(Button);
 
 
 ## 更新
+###
+1. `picker-field` 增加只读属性
 ### v0.1.14
 1. `Switch` 组件关闭时按钮显示灰色
 2. `ButtonGroup` 边框样式优化，不会出现2px的边框

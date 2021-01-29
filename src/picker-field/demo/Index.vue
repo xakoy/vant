@@ -10,6 +10,9 @@
     <demo-block title="form模式">
       <bvan-picker-field form v-model="num" label="类型" show-toolbar :columns="singleNums"/>
     </demo-block>
+    <demo-block title="只读模式">
+       <bvan-picker-field v-model="c" label="城市" readonly show-toolbar :columns="singleColumns" @change="onChange1" />
+    </demo-block>
   </demo-section>
 </template>
 
