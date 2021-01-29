@@ -38,6 +38,10 @@ const s = {
       type: Boolean,
       default: false
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     labelWidth: [Number, String],
     labelClass: null,
     name: String,
@@ -175,7 +179,7 @@ const s = {
       },
       on: {
         click: () => {
-          if(this.readonly) {
+          if(this.readonly || this.disabled) {
             return
           }
           this.popupVisible = true;
@@ -188,7 +192,7 @@ const s = {
 
 
     return (
-      <Field is-link={!this.readonly} readonly={true} {...fieldProps}>
+      <Field is-link={!this.readonly && !this.disabled} readonly={true} {...fieldProps} disabled={this.disabled}>
         <Popup {...popupProps} get-container="body">
             <DatetimePicker {...datetimePickerProps} />
         </Popup>
