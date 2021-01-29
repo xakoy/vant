@@ -31,7 +31,7 @@ Vue.use(Button);
 
 
 ## 更新
-###
+### v0.1.15
 1. `picker-field` 增加只读属性、禁用属性
 2. `datetime-picker-field` 增加只读属性、禁用属性
 ### v0.1.14
