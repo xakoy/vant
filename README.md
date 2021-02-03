@@ -31,7 +31,7 @@ Vue.use(Button);
 
 
 ## 更新
-### 
+### v0.1.16
 1. 修复row, col样式问题
 ### v0.1.15
 1. `picker-field` 增加只读属性、禁用属性
