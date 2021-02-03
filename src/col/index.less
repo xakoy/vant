@@ -1,6 +1,6 @@
 @import '../style/var';
 
-.bvan-col {
+.@{module}-col {
   float: left;
   box-sizing: border-box;
   min-height: 1px;
@@ -8,12 +8,12 @@
 
 .generate-col(24);
 .generate-col(@n, @i: 1) when (@i =< @n) {
-  .bvan-col--@{i} {
-    width: @i * 100% / 24;
+  .@{module}-col--@{i} {
+    width: (@i * 100% / 24);
   }
 
-  .bvan-col--offset-@{i} {
-    margin-left: @i * 100% / 24;
+  .@{module}-col--offset-@{i} {
+    margin-left: (@i * 100% / 24);
   }
 
   .generate-col(@n, (@i + 1));
